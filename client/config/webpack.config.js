@@ -62,7 +62,7 @@ module.exports = function(env) {
       {
         admin: ['client/js/admin/admin.js'],
         article: ['client/js/article/article.js'],
-        landing: ['client/js/landing/landing.js'],
+        archive: ['client/js/archive/archive.js'],
       },
 
       // Environment Info & Single Entry Point
