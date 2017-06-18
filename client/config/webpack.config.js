@@ -45,6 +45,7 @@ module.exports = function(env) {
     {
       loader: 'postcss-loader',
       options: {
+        config: path.join(__dirname, './postcss.config.js'),
         plugins: postCSSPlugins,
       },
     },
