@@ -49,6 +49,10 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+# Git Ignore Webpack
+
+node_modules/
+
 # Git Ignore SASS
 
 .sass-cache/

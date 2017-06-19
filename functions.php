@@ -7,6 +7,9 @@
  * @package roundhouse
  */
 
+define( 'ROUNDHOUSE_PATH', dirname( __FILE__ ) );
+define( 'ROUNDHOUSE_URL', get_template_directory_uri() );
+
 if ( ! function_exists( 'roundhouse_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -101,21 +104,13 @@ function roundhouse_widgets_init() {
 }
 add_action( 'widgets_init', 'roundhouse_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
-function roundhouse_scripts() {
-	wp_enqueue_style( 'roundhouse-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'roundhouse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'roundhouse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'roundhouse_scripts' );
+// WordPress Underscores theme JS
+require_once ROUNDHOUSE_PATH . '/inc/wp-assets.php';
+// Generated asset versioning function.
+// NOTE: This is a auto-generated file, alter it manually at your own risk.
+require_once ROUNDHOUSE_PATH . '/inc/versioned-assets.php';
+// Manage static assets (js and css).
+require_once ROUNDHOUSE_PATH . '/inc/assets.php';
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
