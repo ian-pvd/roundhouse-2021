@@ -1,10 +1,11 @@
 /* Core SCSS */
 
-// @import 'variables';
+@import 'variables';
+@import 'utilities';
 @import 'breakpoints';
+@import 'layout';
 @import 'colors';
 @import 'typography';
-// @import 'layout';
 
 // Load Theme Defaults
 @import 'theme-defaults';

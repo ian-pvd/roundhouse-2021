@@ -1,0 +1,11 @@
+/* SCSS Utilities
+ *
+ * Helper mixins and functions for use throughout the theme
+ */
+
+ @function rem($px, $base: $unit) {
+ 	// TODO, check if value is valid
+ 	//   1. a number
+ 	//   2. unitless
+ 	@return calc(#{$px}/#{$base}rem);
+ }
