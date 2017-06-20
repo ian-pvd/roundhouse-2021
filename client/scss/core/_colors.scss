@@ -1,6 +1,9 @@
-/* Core SCSS Values */
+/* Core CSS Colors
+ *
+ * List of 24 named colors for use in CSS.
+ * SCSS maps `color()` helper function
+ */
 
-// Colors
 $colors: (
 	black: black,
 	very-dark-grey: hsl(0,0,20),

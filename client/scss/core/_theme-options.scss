@@ -1,11 +1,15 @@
-// Theme Overrides
+/* Theme Overrides
+ *
+ * Custom values for theme variables.
+ * Overrides dafaults in `./theme-defaults.scss`
+ */
 
 // Custom Colors
 // @see `./_colors.scss`
 $custom-colors: ();
 $colors: map-merge($colors, $custom-colors);
 
-// Project Colors
+// Custom Project Colors
 // @see `./_theme-defaults.scss`
 
 // Custom Font Families
@@ -13,5 +17,5 @@ $colors: map-merge($colors, $custom-colors);
 $custom-font-families: ();
 $font-families: map-merge($font-families, $custom-font-families);
 
-// Project Fonts
+// Custom Project Fonts
 // @see `./_theme-defaults.scss`
