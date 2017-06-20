@@ -1,12 +1,14 @@
 module.exports = {
   rules: {
-    'at-rule-empty-line-before': ['always', {
-        except: [
-            'blockless-after-same-name-blockless',
-            'first-nested',
-        ],
-        ignore: ['after-comment'],
-    }],
+    // @TODO: first-nested doesn't seem to be honored in SASS functions
+    // @TODO: need a fix for two at-rules in a row
+    // 'at-rule-empty-line-before': ['always', {
+    //     except: [
+    //         'blockless-after-same-name-blockless',
+    //         'first-nested',
+    //     ],
+    //     ignore: ['after-comment'],
+    // }],
     'at-rule-name-case': 'lower',
     'at-rule-name-space-after': 'always',
     'at-rule-semicolon-newline-after': 'always',
@@ -46,10 +48,12 @@ module.exports = {
     'selector-list-comma-newline-after': 'always',
     'selector-max-specificity': '0,3,1',
     'selector-pseudo-element-colon-notation': 'double',
-    'string-quotes': 'single',
+    // @TODO: Font names use single quotes, font lists use double quotes.
+    // 'string-quotes': 'single',
     'unit-no-unknown': true,
     'value-no-vendor-prefix': true,
-    'value-keyword-case': 'lower',
+    // @TODO: Font names need to be in title case or whatever
+    // 'value-keyword-case': 'lower',
     'value-list-comma-newline-after': 'always-multi-line',
     'value-list-comma-space-after': 'always',
   },
