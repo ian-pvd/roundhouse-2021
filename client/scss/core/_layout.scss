@@ -20,6 +20,7 @@ $content-width: 40rem;
 	width: #{$width};
 }
 
+// Adds vertical spacing to all child elements but the last
 @mixin vertical-rhythym($spacing) {
 	> * {
 		margin-bottom: $spacing;
@@ -30,18 +31,23 @@ $content-width: 40rem;
 	}
 }
 
+// Makes an image frame at a width & height ratio
 @mixin intrinsic-image($width, $height) {
-	width: 100%;
 	height: 0;
-	padding-top: calc((#{height}/#{width}) * 100%);
-	position: relative;
 	overflow: hidden;
+	padding-top: calc((#{$height}/#{$width}) * 100%);
+	position: relative;
+	width: 100%;
 
 	> img,
 	> source {
 		position: absolute;
-		top: 0;
-		margin-left: 50%;
+		// @TODO: add left, center, right align-x options
+		left: 50%;
 		transform: translateX(-50%);
+		// @TODO: add top, center, bottom align-y options
+		// @NOTE: if centering both x + y, combine translate()
+		top: 50%;
+		transform: translate(-50%,-50%);
 	}
 }
