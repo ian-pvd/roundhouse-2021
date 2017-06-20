@@ -1,0 +1,17 @@
+// Theme Overrides
+
+// Custom Colors
+// @see `./_colors.scss`
+$custom-colors: ();
+$colors: map-merge($colors, $custom-colors);
+
+// Project Colors
+// @see `./_theme-defaults.scss`
+
+// Custom Font Families
+// @see `./_typography.scss`
+$custom-font-families: ();
+$font-families: map-merge($font-families, $custom-font-families);
+
+// Project Fonts
+// @see `./_theme-defaults.scss`
