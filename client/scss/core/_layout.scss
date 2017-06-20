@@ -32,7 +32,7 @@ $content-width: 40rem;
 }
 
 // Makes an image frame at a width & height ratio
-@mixin intrinsic-image($width, $height) {
+@mixin intrinsic-image($width, $height, $align-x: center, $align-y: center) {
 	height: 0;
 	overflow: hidden;
 	padding-top: calc((#{$height}/#{$width}) * 100%);
@@ -49,5 +49,10 @@ $content-width: 40rem;
 		// @NOTE: if centering both x + y, combine translate()
 		top: 50%;
 		transform: translate(-50%,-50%);
+		// If 'center' & 'center'
+		//   do both (combine translate)
+		// else
+		//   do x
+		//   do y
 	}
 }
