@@ -1,0 +1,26 @@
+/* Theme Breakpoints
+ *
+ * Media and screen values, and helper functions
+ */
+
+$breakpoints: (
+	mobile: "(max-width: 640px)",
+	tablet: "(min-width: 641px) and (max-width: 1024px)",
+	desktop: "(min-width: 1025px) and (max-width: 1600px)",
+	widescreen: "(min-width: 1601px)"
+);
+
+// SCSS Breakpoint shortcut mixin
+// @TODO: rewrite this to accept ($from, $to) values.
+@mixin breakpoint($key, $media-type: all) {
+
+	@if map-has-key($breakpoints, $key) {
+		@media #{inspect(map-get($breakpoints, $key))} {
+			@content;
+		}
+	}
+
+	@else {
+		@warn 'Unknown `#{$key}` in $breakpoints.';
+	}
+}
