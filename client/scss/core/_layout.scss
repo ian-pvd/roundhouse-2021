@@ -19,3 +19,13 @@ $content-width: 40rem;
 	transform: translateX(-50%);
 	width: #{$width};
 }
+
+@mixin vertical-rhythym($spacing) {
+	> * {
+		margin-bottom: $spacing;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

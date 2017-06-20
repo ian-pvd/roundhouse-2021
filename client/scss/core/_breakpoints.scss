@@ -13,7 +13,6 @@ $breakpoints: (
 // SCSS Breakpoint shortcut mixin
 // @TODO: rewrite this to accept ($from, $to) values.
 @mixin breakpoint($key, $media-type: all) {
-
 	@if map-has-key($breakpoints, $key) {
 		@media #{inspect(map-get($breakpoints, $key))} {
 			@content;
