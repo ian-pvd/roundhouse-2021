@@ -5,3 +5,17 @@
 
 // Max site width
 $site-width: rem(1200);
+
+// Max content width
+$content-width: 40rem;
+
+/* SCSS Layout Utilities
+ *
+ */
+
+// Variable Width Full Bleed Mixin
+@mixin full-bleed($width: 100vw) {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	width: #{$width};
+}
