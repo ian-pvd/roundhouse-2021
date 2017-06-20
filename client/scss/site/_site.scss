@@ -21,3 +21,8 @@ body {
 .content-area {
 	max-width: $content-width;
 }
+
+blockquote p {
+
+	@include intrinsic-image(16, 9, center, middle);
+}

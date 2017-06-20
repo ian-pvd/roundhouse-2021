@@ -22,6 +22,7 @@ $content-width: 40rem;
 
 // Adds vertical spacing to all child elements but the last
 @mixin vertical-rhythym($spacing) {
+
 	> * {
 		margin-bottom: $spacing;
 
@@ -32,7 +33,7 @@ $content-width: 40rem;
 }
 
 // Makes an image frame at a width & height ratio
-@mixin intrinsic-image($width, $height, $align-x: center, $align-y: center) {
+@mixin intrinsic-image($width, $height, $align-x: center, $align-y: middle) {
 	height: 0;
 	overflow: hidden;
 	padding-top: calc((#{$height}/#{$width}) * 100%);
@@ -43,16 +44,37 @@ $content-width: 40rem;
 	> source {
 		position: absolute;
 		// @TODO: add left, center, right align-x options
-		left: 50%;
-		transform: translateX(-50%);
 		// @TODO: add top, center, bottom align-y options
-		// @NOTE: if centering both x + y, combine translate()
-		top: 50%;
-		transform: translate(-50%,-50%);
 		// If 'center' & 'center'
-		//   do both (combine translate)
-		// else
-		//   do x
-		//   do y
+		@if (($align-x == 'center') and ($align-y == 'middle')) {
+			// do both (combine translate)
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		@else {
+			// do x
+			@if ($align-x == 'left') {
+				left: 0;
+			}
+			@else if ($align-x == 'center') {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			@else {
+				right: 0;
+			}
+			// do y
+			@if ($align-y == 'top') {
+				top: 0;
+			}
+			@else if ($align-y == 'middle') {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			@else {
+				bottom: 0;
+			}
+		}
 	}
 }
