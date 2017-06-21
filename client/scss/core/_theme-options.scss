@@ -4,6 +4,11 @@
  * Overrides dafaults in `./theme-defaults.scss`
  */
 
+// Custom Breakpoints
+// @see `./_breakpoints.scss`
+$custom-breakpoints: ();
+$breakpoints: map-merge($breakpoints, $custom-breakpoints);
+
 // Custom Colors
 // @see `./_colors.scss`
 $custom-colors: ();
