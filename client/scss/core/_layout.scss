@@ -33,7 +33,7 @@ $content-width: 40rem;
 }
 
 // Makes an image frame at a width & height ratio
-@mixin intrinsic-image($width, $height, $align-x: center, $align-y: middle) {
+@mixin intrinsic-image($width, $height, $vertical-align: middle) {
 	height: 0;
 	overflow: hidden;
 	padding-top: calc((#{$height}/#{$width}) * 100%);
@@ -43,38 +43,15 @@ $content-width: 40rem;
 	> img,
 	> source {
 		position: absolute;
-		// @TODO: add left, center, right align-x options
-		// @TODO: add top, center, bottom align-y options
-		// If 'center' & 'center'
-		@if (($align-x == 'center') and ($align-y == 'middle')) {
-			// do both (combine translate)
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%,-50%);
+		@if ($vertical-align == 'top') {
+			top: 0;
+		}
+		@else if ($vertical-align == 'bottom') {
+			bottom: 0;
 		}
 		@else {
-			// do x
-			@if ($align-x == 'left') {
-				left: 0;
-			}
-			@else if ($align-x == 'center') {
-				left: 50%;
-				transform: translateX(-50%);
-			}
-			@else {
-				right: 0;
-			}
-			// do y
-			@if ($align-y == 'top') {
-				top: 0;
-			}
-			@else if ($align-y == 'middle') {
-				top: 50%;
-				transform: translateY(-50%);
-			}
-			@else {
-				bottom: 0;
-			}
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 }
