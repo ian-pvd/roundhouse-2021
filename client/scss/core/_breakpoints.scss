@@ -38,8 +38,6 @@ $breakpoints: (
 	}
 	@else if ((type-of($to) == number) and (unitless($to) == false)) {
 		$max-width: $to;
-		@warn 'From is #{$to}';
-		@warn 'So, max-width is #{$max-width}';
 	}
 	@else {
 		@error 'Max width value #{$to} was not found.';
