@@ -21,9 +21,3 @@ body {
 .content-area {
 	max-width: $content-width;
 }
-
-body {
-	@include breakpoints(small, none, all) {
-		background-color: green;
-	}
-}
