@@ -12,7 +12,6 @@ $breakpoints: (
 );
 
 // SCSS Breakpoint shortcut mixin
-// @TODO: add media-type value to media query.
 @mixin breakpoints($from: none, $to: none, $media: all) {
 	$min-width: null;
 	$max-width: null;
