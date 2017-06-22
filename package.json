@@ -33,6 +33,7 @@
     "stylelint-webpack-plugin": "0.7.0",
     "url-loader": "^0.5.8",
     "webpack": "2.2.0",
+    "webpack-dev-server": "^2.5.0",
     "webpack-git-hash": "1.0.2",
     "webpack-livereload-plugin": "0.10.0",
     "webpack-stats-plugin": "0.1.4"
