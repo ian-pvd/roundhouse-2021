@@ -26,6 +26,11 @@ function roundhouse_enqueue_assets() {
 		wp_enqueue_script( 'roundhouse-common-js', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'common-js' ), array(), '1.0' );
 		wp_enqueue_script( 'roundhouse-site-js', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'site-js' ), array( 'roundhouse-common-js' ), '1.0' );
 
+		if ( is_admin() ) {
+			wp_enqueue_script( 'roundhouse-admin-js', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'admin-js' ), array( 'roundhouse-common-js' ), '1.0' );
+			wp_enqueue_style( 'roundhouse-admin-css', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'admin-css' ), array(), '1.0' );
+		}
+
 		if ( is_front_page() ) {
 			wp_enqueue_script( 'roundhouse-home-js', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'home-js' ), array( 'roundhouse-common-js' ), '1.0' );
 			wp_enqueue_style( 'roundhouse-home-css', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'home-css' ), array(), '1.0' );
