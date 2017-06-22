@@ -4,22 +4,66 @@
  */
 
 $breakpoints: (
-	mobile: "(max-width: 640px)",
-	tablet: "(min-width: 641px) and (max-width: 1024px)",
-	desktop: "(min-width: 1025px) and (max-width: 1600px)",
-	widescreen: "(min-width: 1601px)"
+	x-small: 320px,
+	small: 640px,
+	medium: 1024px,
+	large: 1600px,
+	x-large: 2800px
 );
 
 // SCSS Breakpoint shortcut mixin
-// @TODO: rewrite this to accept ($from, $to) values.
-@mixin breakpoint($key, $media-type: all) {
-	@if map-has-key($breakpoints, $key) {
-		@media #{inspect(map-get($breakpoints, $key))} {
+// @TODO: add media-type value to media query.
+@mixin breakpoints($from: none, $to: none, $media: all) {
+	$min-width: null;
+	$max-width: null;
+
+	@if (type-of($from) == string) and (map-has-key($breakpoints, $from)) {
+		$min-width: map-get($breakpoints, $from);
+	}
+	@else if ($from == none) {
+		$min-width: false;
+	}
+	@else if ((type-of($from) == number) and (unitless($from) == false)) {
+		$min-width: $from;
+	}
+	@else {
+		@error 'Min width value #{$from} was not found.';
+	}
+
+	@if (type-of($to) == string) and (map-has-key($breakpoints, $to)) {
+		$max-width: map-get($breakpoints, $to);
+	}
+	@else if ($to == none) {
+		$max-width: false;
+	}
+	@else if ((type-of($to) == number) and (unitless($to) == false)) {
+		$max-width: $from;
+	}
+	@else {
+		@error 'Max width value #{$to} was not found.';
+	}
+
+	// If both min & max values
+	@if ($min-width != false) AND ($max-width != false) {
+		$min-width: $min-width + 1px;
+		@media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
 			@content;
 		}
 	}
-
-	@else {
-		@warn 'Unknown `#{$key}` in $breakpoints.';
+	// If either min or max vlaue
+	@else if ($min-width != false) {
+		$min-width: $min-width + 1px;
+		@media (min-width: #{$min-width}) {
+			@content;
+		}
 	}
+	@else if ($max-width != false) {
+		@media (max-width: #{$max-width}) {
+			@content;
+		}
+	}
+	// if min and max are both false
+	@else {
+		@content;
+ 	}
 }
