@@ -1,7 +1,10 @@
 /* Site CSS */
 
+// Load SCSS Core
 @import '../core/loader';
+// Load Theme Overrides
+@import 'theme-options';
+
+// Import Global Styles
 @import 'reset';
 @import 'site';
-// @import 'site-header';
-// @import 'site-footer';

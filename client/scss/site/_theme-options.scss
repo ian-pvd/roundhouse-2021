@@ -1,26 +1,26 @@
 /* Theme Overrides
  *
  * Custom values for theme variables.
- * Overrides dafaults in `./theme-defaults.scss`
+ * Overrides defaults in `../core/theme-defaults.scss`
  */
 
 // Custom Breakpoints
-// @see `./_breakpoints.scss`
+// @see `../core/_breakpoints.scss`
 $custom-breakpoints: ();
 $breakpoints: map-merge($breakpoints, $custom-breakpoints);
 
 // Custom Colors
-// @see `./_colors.scss`
+// @see `../core/_colors.scss`
 $custom-colors: ();
 $colors: map-merge($colors, $custom-colors);
 
 // Custom Project Colors
-// @see `./_theme-defaults.scss`
+// @see `../core/_theme-defaults.scss`
 
 // Custom Font Families
-// @see `./_typography.scss`
+// @see `../core/_typography.scss`
 $custom-font-families: ();
 $font-families: map-merge($font-families, $custom-font-families);
 
 // Custom Project Fonts
-// @see `./_theme-defaults.scss`
+// @see `../core/_theme-defaults.scss`
