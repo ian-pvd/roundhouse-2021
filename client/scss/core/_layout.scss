@@ -38,8 +38,6 @@ $content-width: 40rem;
 	overflow: hidden;
 	padding-top: calc((#{$height}/#{$width}) * 100%);
 	position: relative;
-	// @TODO: Refactor to work at any width.
-	width: 100%;
 
 	> img,
 	> source {
