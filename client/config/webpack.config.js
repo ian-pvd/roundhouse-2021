@@ -62,8 +62,10 @@ module.exports = function(env) {
       // Custom Package entry points
       {
         admin: ['client/js/admin/admin.js'],
-        article: ['client/js/article/article.js'],
         archive: ['client/js/archive/archive.js'],
+        article: ['client/js/article/article.js'],
+        home: ['client/js/home/home.js'],
+        page: ['client/js/page/page.js'],
       },
 
       // Environment Info & Single Entry Point
