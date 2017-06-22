@@ -8,7 +8,7 @@ $breakpoints: (
 	small: 640px,
 	medium: 1024px,
 	large: 1600px,
-	x-large: 2800px
+	x-large: 2800px,
 );
 
 // SCSS Breakpoint shortcut mixin
@@ -37,7 +37,9 @@ $breakpoints: (
 		$max-width: false;
 	}
 	@else if ((type-of($to) == number) and (unitless($to) == false)) {
-		$max-width: $from;
+		$max-width: $to;
+		@warn 'From is #{$to}';
+		@warn 'So, max-width is #{$max-width}';
 	}
 	@else {
 		@error 'Max width value #{$to} was not found.';
