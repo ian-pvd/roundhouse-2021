@@ -113,6 +113,19 @@ require_once ROUNDHOUSE_PATH . '/inc/versioned-assets.php';
 require_once ROUNDHOUSE_PATH . '/inc/assets.php';
 
 /**
+ * Add custom query vars.
+ *
+ * @param array $vars Array of current query vars.
+ * @return array $vars Array of query vars.
+ */
+add_filter( 'query_vars', function( $vars ) {
+	// Add a query var to enable hot reloading
+	$vars[] = 'webpack-dev';
+	return $vars;
+} );
+
+
+/**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
 function roundhouse_pingback_header() {

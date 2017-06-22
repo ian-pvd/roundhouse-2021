@@ -13,7 +13,7 @@
 function roundhouse_enqueue_assets() {
 	// Dev-specific scripts.
 	if ( false !== strpos( get_site_url(), '.dev' ) &&
-		true == get_query_var( 'roundhouse-dev', false ) ) {
+		true == get_query_var( 'webpack-dev', false ) ) {
 		wp_enqueue_script(
 			'dev',
 			'http://localhost:8080/static/js/dev.bundle.js',
