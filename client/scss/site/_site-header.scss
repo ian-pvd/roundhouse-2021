@@ -1,0 +1,35 @@
+/* Site Header */
+
+.site-header {
+	position: fixed;
+	width: 100%;
+	padding: spacer(0.5);
+	display: flex;
+	z-index: 10;
+
+	a {
+		&:hover,
+		&:active,
+		&:visited,
+		&:focus {
+			color: inherit;
+		}
+	}
+}
+
+.site-branding {
+	flex: 0 0 auto;
+	margin-right: 1em;
+}
+
+.site-title {
+	font: $font-header;
+	margin: 0;
+	line-height: 1;
+	letter-spacing: 0.0125em;
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+}
