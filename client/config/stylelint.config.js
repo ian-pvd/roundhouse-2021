@@ -41,6 +41,9 @@ module.exports = {
     'selector-pseudo-element-case': 'lower',
     'selector-pseudo-element-colon-notation': 'double',
     'rule-empty-line-before': ['always', {
+        'except': [
+            'first-nested',
+        ],
         'ignore': ['after-comment'],
     }],
     'selector-combinator-space-after': 'always',

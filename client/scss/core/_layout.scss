@@ -22,7 +22,6 @@ $content-width: 40rem;
 
 // Adds vertical spacing to all child elements but the last
 @mixin vertical-rhythym($spacing) {
-
 	> * {
 		margin-bottom: $spacing;
 
