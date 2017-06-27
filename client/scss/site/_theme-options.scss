@@ -4,6 +4,10 @@
  * Overrides defaults in `../core/theme-defaults.scss`
  */
 
+// Base unit in px
+// @see `../core/_variables.scss`
+$base-unit: 16;
+
 // Custom Breakpoints
 // @see `../core/_breakpoints.scss`
 $custom-breakpoints: ();
@@ -24,3 +28,14 @@ $font-families: map-merge($font-families, $custom-font-families);
 
 // Custom Project Fonts
 // @see `../core/_theme-defaults.scss`
+
+// Custom Z-Index
+// @see `../core/_z-index.scss`
+$custom-z-index: (
+	site-header: 10,
+);
+$z-index: map-merge($z-index, $custom-z-index);
+
+// Theme Vars
+$site-header-height: spacer(3);
+$site-header-margin-bottom: spacer(1);

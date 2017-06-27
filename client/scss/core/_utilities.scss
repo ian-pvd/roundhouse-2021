@@ -3,7 +3,7 @@
  * Helper mixins and functions for use throughout the theme
  */
 
-@function rem($px, $base: $unit) {
+@function rem($px, $base: $base-unit) {
 	// TODO, check if value is valid
 	//   1. a number
 	//   2. unitless
@@ -11,6 +11,6 @@
 }
 
 // Space using rem grid.
-@function spacer($unit) {
-	@return ( $unit * 1rem );
+@function spacer($units) {
+	@return ( $units * 1rem );
 }

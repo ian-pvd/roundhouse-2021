@@ -1,19 +1,31 @@
 /* Site Header */
 
 .site-header {
-	position: fixed;
+	background-color: color(white);
 	width: 100%;
 	padding: spacer(0.5);
 	display: flex;
-	z-index: 10;
+	z-index: z-index('site-header');
+	height: $site-header-height;
+	margin-bottom: $site-header-margin-bottom;
 
 	a {
+
 		&:hover,
 		&:active,
 		&:visited,
 		&:focus {
 			color: inherit;
 		}
+	}
+}
+
+.site-header--sticky {
+	position: fixed;
+	border-bottom: 1px solid color(black);
+
+	& ~ .site-content {
+		padding-top: $site-header-height + $site-header-margin-bottom;
 	}
 }
 

@@ -1,0 +1,10 @@
+/* Main Navigation */
+
+.main-navigation {
+	display: flex;
+
+	/* DEV */
+	li > ul {
+		display: none;
+	}
+}
