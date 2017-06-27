@@ -1,0 +1,25 @@
+/* Core Z-Index
+ *
+ * List of default z-index values.
+ * SCSS maps `z-index()` helper function
+ */
+
+$z-index: (
+	modal: 1000,
+	notice: 100,
+	interactive: 10,
+	first: 1,
+	neutral: 0,
+	last: -1,
+);
+
+// SCSS Z-Index Shortcut Function
+@function z-index($key) {
+
+	@if map-has-key($z-index, $key) {
+		@return map-get($z-index, $key);
+	}
+
+	@warn 'Unknown `#{$key}` in $z-index.';
+	@return null;
+}

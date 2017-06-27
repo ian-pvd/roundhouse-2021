@@ -1,0 +1,46 @@
+/* Site Header */
+
+.site-header {
+	background-color: color(white);
+	border-bottom: 1px solid color(black);
+	display: flex;
+	height: $site-header-height;
+	margin-bottom: $site-header-margin-bottom;
+	padding: spacer(0.5);
+	width: 100%;
+	z-index: z-index('site-header');
+
+	a {
+		&:hover,
+		&:active,
+		&:visited,
+		&:focus {
+			color: inherit;
+		}
+	}
+}
+
+.site-header--sticky {
+	position: fixed;
+
+	& ~ .site-content {
+		padding-top: $site-header-height + $site-header-margin-bottom;
+	}
+}
+
+.site-branding {
+	flex: 0 0 auto;
+	margin-right: spacer(1);
+}
+
+.site-title {
+	font: $font-header;
+	margin: 0;
+	line-height: 1;
+	letter-spacing: 0.0125em;
+
+	a {
+		@extend %link-hover;
+		display: block;
+	}
+}

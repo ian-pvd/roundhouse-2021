@@ -1,6 +1,6 @@
-/* Theme Overrides
+/* Theme Option Overrides
  *
- * Custom values for theme variables.
+ * Custom values for theme options.
  * Overrides defaults in `../core/theme-defaults.scss`
  */
 
@@ -24,3 +24,10 @@ $font-families: map-merge($font-families, $custom-font-families);
 
 // Custom Project Fonts
 // @see `../core/_theme-defaults.scss`
+
+// Custom Z-Index
+// @see `../core/_z-index.scss`
+$custom-z-index: (
+	site-header: 10,
+);
+$z-index: map-merge($z-index, $custom-z-index);
