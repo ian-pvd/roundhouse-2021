@@ -2,12 +2,13 @@
 
 .site-header {
 	background-color: color(white);
-	width: 100%;
-	padding: spacer(0.5);
+	border-bottom: 1px solid color(black);
 	display: flex;
-	z-index: z-index('site-header');
 	height: $site-header-height;
 	margin-bottom: $site-header-margin-bottom;
+	padding: spacer(0.5);
+	width: 100%;
+	z-index: z-index('site-header');
 
 	a {
 		&:hover,
@@ -21,7 +22,6 @@
 
 .site-header--sticky {
 	position: fixed;
-	border-bottom: 1px solid color(black);
 
 	& ~ .site-content {
 		padding-top: $site-header-height + $site-header-margin-bottom;
@@ -30,7 +30,7 @@
 
 .site-branding {
 	flex: 0 0 auto;
-	margin-right: 1em;
+	margin-right: spacer(1);
 }
 
 .site-title {
@@ -40,7 +40,7 @@
 	letter-spacing: 0.0125em;
 
 	a {
+		@extend %link-hover;
 		display: block;
-		text-decoration: none;
 	}
 }

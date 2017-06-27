@@ -1,0 +1,13 @@
+/* Theme Variable Overrides
+ *
+ * Custom values for theme variables.
+ * Overrides defaults in `../core/_variables.scss`
+ */
+
+// Base unit in px
+// @see `../core/_variables.scss`
+$base-unit: 16;
+
+// Theme Vars
+$site-header-height: spacer(3);
+$site-header-margin-bottom: spacer(1);
