@@ -2,9 +2,36 @@
 
 .main-navigation {
 	display: flex;
+	flex: 1 0 auto;
 
 	/* DEV */
 	li > ul {
 		display: none;
 	}
+
+	.menu {
+		margin-left: auto;
+	}
+
+	.nav-menu {
+		display: flex;
+
+		> li {
+			margin-right: spacer(1);
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			a {
+				display: block;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.menu-toggle {
+	/* DEV */
+	display: none;
 }

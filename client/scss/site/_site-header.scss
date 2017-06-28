@@ -6,18 +6,10 @@
 	display: flex;
 	height: $site-header-height;
 	margin-bottom: $site-header-margin-bottom;
-	padding: spacer(0.5);
+	padding: spacer(0.5) spacer(1);
 	width: 100%;
-	z-index: z-index('site-header');
-
-	a {
-		&:hover,
-		&:active,
-		&:visited,
-		&:focus {
-			color: inherit;
-		}
-	}
+	z-index: z-index(site-header);
+	align-items: center;
 }
 
 .site-header--sticky {
@@ -29,18 +21,25 @@
 }
 
 .site-branding {
+	display: flex;
 	flex: 0 0 auto;
 	margin-right: spacer(1);
 }
 
 .site-title {
 	font: $font-header;
-	margin: 0;
-	line-height: 1;
 	letter-spacing: 0.0125em;
+	line-height: 1;
+	margin: 0;
 
 	a {
-		@extend %link-hover;
 		display: block;
+		text-decoration: none;
 	}
+}
+
+.site-description {
+	margin-left: spacer(1);
+	padding-left: spacer(1);
+	border-left: 1px solid color(dark-grey);
 }
