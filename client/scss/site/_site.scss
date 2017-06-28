@@ -13,9 +13,22 @@ body {
 	font: $font-body;
 }
 
+html,
+body,
+.site {
+	height: 100%
+}
+
+.site {
+	display: flex;
+	flex-direction: column;
+}
+
 .site-content {
+	width: 100%;
 	max-width: $site-width;
-	margin: 0 auto;
+	margin: 0 auto spacer(1);
+	padding: 0 spacer(1);
 }
 
 .content-area {
