@@ -1,15 +1,19 @@
-/* Main Navigation */
+/*
+ * Main Navigation
+ *
+ * Primary menu in the site-header.
+ * Options:
+ * 	 - Top Level Only
+ *   - Priority Nav
+ */
 
+/* Default main navigation */
 .main-navigation {
 	display: flex;
-	flex: 1 0 auto;
+	flex: 1 1 auto;
+	max-height: 100%;
 
-	/* DEV */
-	li > ul {
-		display: none;
-	}
-
-	.menu {
+	> div[class^='menu'] {
 		margin-left: auto;
 	}
 
@@ -17,16 +21,37 @@
 		display: flex;
 
 		> li {
-			margin-right: spacer(1);
+			margin: 0 0 0 spacer(1);
 
-			&:last-of-type {
-				margin-right: 0;
+			&:first-of-type {
+				margin: 0;
 			}
 
 			a {
 				display: block;
 				text-decoration: none;
 			}
+		}
+	}
+}
+
+/* Top Level Only main navigation */
+.main-navigation--top-level {
+	li > ul {
+		display: none;
+	}
+}
+
+/* Priority Nav main navigation */
+.main-navigation--priority-nav {
+	.nav-menu {
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		max-height: rem(26);
+		overflow: hidden;
+
+		li > ul {
+			display: none;
 		}
 	}
 }
