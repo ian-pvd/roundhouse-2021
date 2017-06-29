@@ -1,4 +1,4 @@
-webpackJsonp([5,6],{
+webpackJsonp([5],{
 
 /***/ "./client/js/admin/admin.js":
 /* unknown exports provided */

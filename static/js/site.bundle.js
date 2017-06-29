@@ -1,4 +1,4 @@
-webpackJsonp([0,6],{
+webpackJsonp([0],{
 
 /***/ "./client/js/site/site.js":
 /* unknown exports provided */
