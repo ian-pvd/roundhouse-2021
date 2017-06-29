@@ -158,16 +158,6 @@ function roundhouse_site_title() {
 		$wrapper = 'h1';
 	}
 
-	$site_logo = ROUNDHOUSE_URL . '/images/logo';
-
-	if ( file_exists( $site_logo ) . '.svg' ) {
-		$site_title = file_get_contents($site_logo . '.svg');
-		$class_attr .= ' site-logo site-logo--svg';
-	} elseif ( file_exists( $site_logo ) . '.png' ) {
-		$site_title = '<img src="' . $site_logo . '.png" />';
-		$class_attr .= ' site-logo site-logo--png';
-	}
-
 	printf( '<%1$s class="%2$s"><a href="%3$s" rel="home">%4$s</a></%1$s>',
 		$wrapper,
 		$class_attr,
