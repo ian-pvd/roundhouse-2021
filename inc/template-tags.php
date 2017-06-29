@@ -149,7 +149,6 @@ add_action( 'save_post',     'roundhouse_category_transient_flusher' );
  * Checks for site logo and prints home link for the header.
  */
 function roundhouse_site_title() {
-	/*?><p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p><?php */
 
 	$wrapper = 'div';
 	$class_attr = 'site-title';
