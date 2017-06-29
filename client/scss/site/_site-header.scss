@@ -38,6 +38,14 @@
 	}
 }
 
+.site-logo {
+	img,
+	svg {
+		width: auto;
+		height: $site-header-content-height;
+	}
+}
+
 .site-description {
 	margin-left: spacer(1);
 	padding-left: spacer(1);

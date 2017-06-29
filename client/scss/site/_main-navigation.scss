@@ -46,7 +46,7 @@
 	.menu {
 		flex-wrap: wrap;
 		justify-content: flex-end;
-		max-height: rem(26);
+		max-height: $site-header-content-height;
 		overflow: hidden;
 
 		li > ul {
