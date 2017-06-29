@@ -144,3 +144,24 @@ function roundhouse_category_transient_flusher() {
 }
 add_action( 'edit_category', 'roundhouse_category_transient_flusher' );
 add_action( 'save_post',     'roundhouse_category_transient_flusher' );
+
+/**
+ * Checks for site logo and prints home link for the header.
+ */
+function roundhouse_site_title() {
+
+	$wrapper = 'div';
+	$class_attr = 'site-title';
+	$site_title = get_bloginfo( 'name' );
+
+	if ( is_front_page() && is_home() ) {
+		$wrapper = 'h1';
+	}
+
+	printf( '<%1$s class="%2$s"><a href="%3$s" rel="home">%4$s</a></%1$s>',
+		$wrapper,
+		$class_attr,
+		esc_url( home_url( '/' ) ),
+		$site_title
+	);
+}
