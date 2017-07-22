@@ -70,6 +70,9 @@ function roundhouse_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Add theme suppot for post thumbnails
+	add_theme_support( 'post-thumbnails' );
 }
 endif;
 add_action( 'after_setup_theme', 'roundhouse_setup' );
