@@ -1,35 +1,41 @@
 /* Core CSS Colors
  *
- * List of 24 named colors for use in CSS.
+ * List of primary & secondary named colors for use in CSS.
  * SCSS maps `color()` helper function
  */
 
 $colors: (
 	black: black,
-	very-dark-grey: hsl(0,0,20),
-	dark-grey: hsl(0,0,40),
+	grey-very-dark: hsl(0,0,20),
+	grey-dark: hsl(0,0,40),
 	grey: hsl(0,0,50),
-	light-grey: hsl(0,0,60),
-	very-light-grey: hsl(0,0,80),
+	grey-light: hsl(0,0,60),
+	grey-very-light: hsl(0,0,80),
 	white: white,
 	red: crimson,
-	dark-red: darkred,
-	light-red: lightcoral,
+	red-dark: darkred,
+	red-light: lightcoral,
 	yellow: yellow,
-	dark-yellow: darkgoldenrod,
-	light-yellow: lemonchiffon,
+	yellow-dark: darkgoldenrod,
+	yellow-light: lemonchiffon,
 	green: forestgreen,
-	dark-green: darkgreen,
-	light-green: palegreen,
+	green-dark: darkgreen,
+	green-light: palegreen,
 	cyan: lightskyblue,
-	dark-cyan: deepskyblue,
-	light-cyan: lightcyan,
+	cyan-dark: deepskyblue,
+	cyan-light: lightcyan,
 	blue: mediumblue,
-	dark-blue: midnightblue,
-	light-blue: dodgerblue,
+	blue-dark: midnightblue,
+	blue-light: dodgerblue,
 	magenta: deeppink,
-	dark-magenta: mediumvioletred,
-	light-magenta: hotpink,
+	magenta-dark: mediumvioletred,
+	magenta-light: hotpink,
+	purple: purple,
+	purple-dark: purple,
+	purple-light: purple,
+	orange: orange,
+	orange-dark: orange,
+	orange-light: orange,
 );
 
 // SCSS Color Map Shortcut Function
