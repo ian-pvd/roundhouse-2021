@@ -8,19 +8,19 @@
 */
 function roundhouse_get_versioned_asset( $asset ) {
 	$assets = array(
-		'site-js' => 'js/site.c434498.bundle.min.js',
-		'site-css' => 'css/site.98da852a9dbfceeedc34.min.css',
-		'page-js' => 'js/page.c434498.bundle.min.js',
-		'page-css' => 'css/page.98da852a9dbfceeedc34.min.css',
-		'home-js' => 'js/home.c434498.bundle.min.js',
-		'home-css' => 'css/home.98da852a9dbfceeedc34.min.css',
-		'article-js' => 'js/article.c434498.bundle.min.js',
-		'article-css' => 'css/article.98da852a9dbfceeedc34.min.css',
-		'archive-js' => 'js/archive.c434498.bundle.min.js',
-		'archive-css' => 'css/archive.98da852a9dbfceeedc34.min.css',
-		'admin-js' => 'js/admin.c434498.bundle.min.js',
-		'admin-css' => 'css/admin.98da852a9dbfceeedc34.min.css',
-		'common-js' => 'js/common.c434498.bundle.min.js',
+		'site-js' => 'js/site.35529c1.bundle.min.js',
+		'site-css' => 'css/site.1aa5cac08d159d2b4b84.min.css',
+		'page-js' => 'js/page.35529c1.bundle.min.js',
+		'page-css' => 'css/page.1aa5cac08d159d2b4b84.min.css',
+		'home-js' => 'js/home.35529c1.bundle.min.js',
+		'home-css' => 'css/home.1aa5cac08d159d2b4b84.min.css',
+		'article-js' => 'js/article.35529c1.bundle.min.js',
+		'article-css' => 'css/article.1aa5cac08d159d2b4b84.min.css',
+		'archive-js' => 'js/archive.35529c1.bundle.min.js',
+		'archive-css' => 'css/archive.1aa5cac08d159d2b4b84.min.css',
+		'admin-js' => 'js/admin.35529c1.bundle.min.js',
+		'admin-css' => 'css/admin.1aa5cac08d159d2b4b84.min.css',
+		'common-js' => 'js/common.35529c1.bundle.min.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }
