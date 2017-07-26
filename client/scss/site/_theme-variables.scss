@@ -9,6 +9,6 @@
 $base-unit: 16;
 
 // Theme Vars
-$site-header-height: spacer(3);
-$site-header-margin-bottom: spacer(1);
-$site-header-content-height: rem(26);
+$height--site-header-content: rem(26);
+$height--site-header: spacer(3);
+$margin-bottom--site-header: spacer(1);
