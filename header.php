@@ -20,7 +20,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'feature-image--full' ); ?>>
+<body <?php body_class( 'feature-image--wide' ); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'roundhouse' ); ?></a>
 
