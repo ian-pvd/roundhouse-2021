@@ -1,19 +1,33 @@
+.post-thumbnail {
+	margin-bottom: 1em;
+}
+
+.feature-image--full,
+.feature-image--wide {
+	.post-thumbnail {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 0;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
 .feature-image--full {
 	.site-main {
 		padding-top: 100vh;
 	}
 
 	.post-thumbnail {
-		position: absolute;
-		top: 0;
 		width: 100vw;
 		height: 100vh;
-		left: 50%;
-		transform: translateX(-50%);
 
 		img {
 			height: 100%;
-			width: 100%;
 			object-fit: cover;
 		}
 	}
@@ -25,19 +39,14 @@
 	}
 
 	.post-thumbnail {
-		position: absolute;
-		top: 0;
 		width: $site-width;
 		height: 0;
 		padding-top: calc((9 / 16) * #{$site-width});
-		left: 50%;
-		transform: translateX(-50%);
 		overflow: hidden;
 
 		img {
 			position: absolute;
 			top: 0;
-			width: 100%;
 		}
 	}
 }
