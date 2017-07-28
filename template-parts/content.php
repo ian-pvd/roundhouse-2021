@@ -11,21 +11,20 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
+	<header class="post-header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="post-meta">
 			<?php roundhouse_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		</div><!-- .post-meta -->
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+	</header><!-- .post-header -->
 
 	<?php
 	// check if the post has a Post Thumbnail assigned to it.
@@ -35,7 +34,7 @@
 		?></div><?php
 	} ?>
 
-	<div class="entry-content">
+	<div class="post-content">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -55,9 +54,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .post-content -->
 
-	<footer class="entry-footer">
+	<footer class="post-footer">
 		<?php roundhouse_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer><!-- .post-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
