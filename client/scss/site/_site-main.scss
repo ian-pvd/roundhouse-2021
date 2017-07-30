@@ -1,6 +1,10 @@
 .site-main {
 	display: flex;
 	justify-content: space-around;
+
+	@include breakpoints(none, medium) {
+		flex-direction: column;
+	}
 }
 
 .post-list,

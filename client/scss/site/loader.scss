@@ -2,14 +2,11 @@
 
 // Load SCSS Core
 @import '../core/loader';
-// Load Theme Overrides
-@import 'theme-variables';
-@import 'theme-options';
-@import 'theme-utilities';
 
 // Import Global Styles
 @import 'reset';
 @import 'site';
+@import 'site-content';
 @import 'site-header';
 @import 'site-main';
 @import 'main-navigation';

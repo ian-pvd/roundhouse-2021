@@ -6,7 +6,7 @@
 .feature-image--wide {
 	.post-thumbnail {
 		position: absolute;
-		top: 0;
+		top: $height--site-header;
 		left: 50%;
 		transform: translateX(-50%);
 		margin-bottom: 0;
@@ -46,7 +46,8 @@
 
 		img {
 			position: absolute;
-			top: 0;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 }
