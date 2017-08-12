@@ -1,0 +1,124 @@
+/**
+ * 
+ * Post Content Styles
+*/
+
+/* stylelint-disable block-no-empty */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+hr {
+	border-color: color(grey);
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+}
+
+cite {
+}
+
+th {
+}
+
+th,
+td {
+}
+
+del,
+strike {
+}
+
+ul,
+ol {
+
+}
+
+ul {
+}
+
+ol {
+}
+
+li {
+}
+
+a {
+	img {
+		border: none;
+	}
+}
+
+p {
+	img {
+	}
+}
+
+address {
+}
+
+abbr,
+acronym {
+}
+
+code,
+var,
+tt,
+kbd {
+}
+
+pre {
+}
+
+img,
+figure,
+video {
+}
+
+// Alignment
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Images
+figure,
+picture {
+}
+
+img {
+}
+
+figure {
+}
+
+figcaption {
+}

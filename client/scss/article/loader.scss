@@ -2,3 +2,8 @@
 
 @import '../core/loader';
 @import 'feature-image';
+
+.post-content {
+
+	@import 'wp-content';
+}
