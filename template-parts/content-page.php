@@ -10,11 +10,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<header class="post-header">
+		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
+	</header><!-- .post-header -->
 
-	<div class="entry-content">
+	<div class="post-content">
 		<?php
 			the_content();
 
@@ -23,10 +23,10 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .post-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="post-footer">
 			<?php
 				edit_post_link(
 					sprintf(
@@ -45,6 +45,6 @@
 					'</span>'
 				);
 			?>
-		</footer><!-- .entry-footer -->
+		</footer><!-- .post-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
