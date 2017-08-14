@@ -31,6 +31,14 @@ $content-width: 36rem;
 	}
 }
 
+// Clear a float
+@mixin clearfix() {
+	&::after {
+		content: "";
+		clear: both;
+	}
+}
+
 // Makes an image frame at a width & height ratio
 @mixin intrinsic-image($width, $height, $vertical-align: middle) {
 	height: 0;

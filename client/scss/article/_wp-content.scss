@@ -11,6 +11,12 @@ h3,
 h4,
 h5,
 h6 {
+	font: $font-header;
+}
+
+a {
+	@extend %link-hover;
+	color: $color-primary;
 	font-weight: 700;
 }
 
@@ -28,76 +34,134 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	border-top: 1px solid;
-	border-bottom: 1px solid;
-	padding: 0.5em 1em;
-	text-indent: 1em;
-	font-style: italic;
-}
-
-cite {
-}
-
-table {
-	border: 1px solid color(grey-light);
-}
-
-th {
-}
-
-th,
-td {
-}
-
-del,
-strike {
-}
-
 ul,
 ol {
+	padding-left: spacer(1);
 
+	ul,
+	ol {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
 }
 
 ul {
+	list-style: disc;
 }
 
 ol {
+	list-style: decimal;
+
+	ol {
+		list-style: lower-alpha;
+
+		ol {
+			list-style: lower-roman;
+		}
+	}
 }
 
 li {
 }
 
-a {
-	img {
-		border: none;
+dl {
+	@include vertical-rhythym(0.5em);
+}
+
+dt {
+	text-decoration: underline;
+}
+
+dd {
+	margin-left: spacer(1);
+	text-indent: spacer(1);
+}
+
+blockquote {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding: 0.5em 1em;
+	text-indent: spacer(3);
+	font-style: italic;
+}
+
+q {
+	display: block;
+	font-style: italic;
+	margin-bottom: 0.5em;
+}
+
+cite {
+	display: block;
+	text-align: right;
+
+	&::before {
+		content: "\2014";
+		margin-right: spacer(0.5);
 	}
 }
 
-p {
-	img {
+table {
+	border: 1px solid color(grey-light);
+	border-collapse: collapse;
+}
+
+thead {
+	th {
+		background: color(grey-very-dark);
+		color: color(white);
+		padding: 0.75em;
+	}
+}
+
+th {
+	background-color: color(grey-very-light);
+}
+
+th,
+td {
+	padding: 0.5em 0.75em;
+}
+
+tr:nth-child(2n) {
+	td {
+		background: color(grey-very-very-light);
 	}
 }
 
 address {
+	padding-left: 1em;
 }
 
 abbr,
 acronym {
+	text-decoration: none;
+	border-bottom: 1px dotted color(grey-light);
+	cursor: help;
 }
 
 code,
 var,
 tt,
 kbd {
+	background: color(grey-very-very-light);
+    padding: 0.125em 0.5em;
+}
+
+del,
+strike {
+	color: color(red-dark);
+	padding: 0.125em;
+}
+
+ins {
+	color: color(green-dark);
 }
 
 pre {
-}
-
-img,
-figure,
-video {
+	background: color(grey-very-very-light);
+	padding: 0.5em 1.5em;
+	overflow-x: auto;
 }
 
 // Alignment
@@ -121,6 +185,22 @@ video {
 // Images
 figure,
 picture {
+}
+
+a {
+	img {
+		border: none;
+	}
+}
+
+p {
+	img {
+	}
+}
+
+img,
+figure,
+video {
 }
 
 img {
