@@ -1,3 +1,11 @@
 /* Article CSS */
 
-@import '../site/loader';
+@import '../core/loader';
+@import 'feature-image';
+@import 'post-header';
+@import 'post-content';
+
+.post-content {
+
+	@import 'wp-content';
+}

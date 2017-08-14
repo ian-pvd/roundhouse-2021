@@ -4,10 +4,10 @@
  */
 
 // Max site width
-$site-width: rem(1200);
+$site-width: rem(1280);
 
 // Max content width
-$content-width: 40rem;
+$content-width: 36rem;
 
 /* SCSS Layout Utilities
  *
@@ -28,6 +28,14 @@ $content-width: 40rem;
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+}
+
+// Clear a float
+@mixin clearfix() {
+	&::after {
+		content: "";
+		clear: both;
 	}
 }
 

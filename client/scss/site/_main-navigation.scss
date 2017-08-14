@@ -49,6 +49,10 @@
 		max-height: $height--site-header-content;
 		overflow: hidden;
 
+		li {
+			height: $height--site-header-content;
+		}
+
 		li > ul {
 			display: none;
 		}

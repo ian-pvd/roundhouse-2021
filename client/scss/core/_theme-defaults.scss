@@ -1,7 +1,7 @@
 /* Theme Defaults
  *
  * Default values for theme variables.
- * Override these options in `../site/theme-options.scss`
+ * Override these options in `../theme/options.scss`
  */
 
 // Default Colors
@@ -17,5 +17,5 @@ $color-highlight: color(red);
 // see `./_typography.scss`
 
 // Default Project Fonts
-$font-body: 1rem/1.667 font-family(sans-serif);
-$font-header: 700 1.5rem/1.667 font-family(sans-serif);
+$font-body: 1rem/#{calc(4/3)} font-family(sans-serif);
+$font-header: 700 1.5rem/#{calc(5/3)} font-family(sans-serif);
