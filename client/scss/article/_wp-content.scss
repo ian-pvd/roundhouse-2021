@@ -29,9 +29,18 @@ i {
 }
 
 blockquote {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding: 0.5em 1em;
+	text-indent: 1em;
+	font-style: italic;
 }
 
 cite {
+}
+
+table {
+	border: 1px solid color(grey-light);
 }
 
 th {
