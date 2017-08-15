@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package roundhouse
+ * @package brigada71
  */
 
 ?><!doctype html>
@@ -22,12 +22,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'roundhouse' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'brigada71' ); ?></a>
 
 	<header id="masthead" class="site-header site-header--sticky" role="banner">
 		<div class="site-branding">
 			<?php
-			roundhouse_site_title();
+			brigada71_site_title();
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
@@ -37,7 +37,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation main-navigation--priority-nav" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'roundhouse' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'brigada71' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',

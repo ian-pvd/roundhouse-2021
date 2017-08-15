@@ -33,7 +33,7 @@ module.exports = function wpAssets(stats) {
 * @param string $asset The asset name.
 * @return string The asset version.
 */
-function roundhouse_get_versioned_asset( $asset ) {
+function brigada71_get_versioned_asset( $asset ) {
 \t$assets = ${result.join('\n')};
 \treturn ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }\n`;

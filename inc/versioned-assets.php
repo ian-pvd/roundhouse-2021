@@ -6,21 +6,21 @@
 * @param string $asset The asset name.
 * @return string The asset version.
 */
-function roundhouse_get_versioned_asset( $asset ) {
+function brigada71_get_versioned_asset( $asset ) {
 	$assets = array(
-		'site-js' => 'js/site.dc2ef69.bundle.min.js',
-		'site-css' => 'css/site.9e90b73008fbb64f4044.min.css',
-		'page-js' => 'js/page.dc2ef69.bundle.min.js',
-		'page-css' => 'css/page.9e90b73008fbb64f4044.min.css',
-		'home-js' => 'js/home.dc2ef69.bundle.min.js',
-		'home-css' => 'css/home.9e90b73008fbb64f4044.min.css',
-		'article-js' => 'js/article.dc2ef69.bundle.min.js',
-		'article-css' => 'css/article.9e90b73008fbb64f4044.min.css',
-		'archive-js' => 'js/archive.dc2ef69.bundle.min.js',
-		'archive-css' => 'css/archive.9e90b73008fbb64f4044.min.css',
-		'admin-js' => 'js/admin.dc2ef69.bundle.min.js',
-		'admin-css' => 'css/admin.9e90b73008fbb64f4044.min.css',
-		'common-js' => 'js/common.dc2ef69.bundle.min.js',
+		'site-js' => 'js/site.c7d2347.bundle.min.js',
+		'site-css' => 'css/site.c5d7352c55647a103a4d.min.css',
+		'page-js' => 'js/page.c7d2347.bundle.min.js',
+		'page-css' => 'css/page.c5d7352c55647a103a4d.min.css',
+		'home-js' => 'js/home.c7d2347.bundle.min.js',
+		'home-css' => 'css/home.c5d7352c55647a103a4d.min.css',
+		'article-js' => 'js/article.c7d2347.bundle.min.js',
+		'article-css' => 'css/article.c5d7352c55647a103a4d.min.css',
+		'archive-js' => 'js/archive.c7d2347.bundle.min.js',
+		'archive-css' => 'css/archive.c5d7352c55647a103a4d.min.css',
+		'admin-js' => 'js/admin.c7d2347.bundle.min.js',
+		'admin-css' => 'css/admin.c5d7352c55647a103a4d.min.css',
+		'common-js' => 'js/common.c7d2347.bundle.min.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "roundhouse",
-  "description": "roundhouse front end build system",
+  "name": "brigada71",
+  "description": "brigada71 front end build system",
   "version": "1.0.1",
   "private": true,
   "scripts": {
