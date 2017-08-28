@@ -1,3 +1,7 @@
 /* Archive CSS */
 
-@import '../core/loader';
+// Load Lib CSS
+@import '../../../lib/scss/archive/loader';
+
+// Load Theme Core
+@import '../theme/loader';

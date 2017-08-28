@@ -54,12 +54,12 @@ module.exports = function(env) {
 
   return {
     entry: processEntry(
-      // Default
+      // Default Theme Entry Point
       {
-        site: ['client/js/site/site.js'],
+       site: ['client/js/site/site.js'],
       },
-
-      // Custom Package entry points
+      
+      // Custom Theme Entry Points
       {
         admin: ['client/js/admin/admin.js'],
         archive: ['client/js/archive/archive.js'],

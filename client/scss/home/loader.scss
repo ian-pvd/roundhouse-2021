@@ -1,3 +1,7 @@
 /* Front Page CSS */
 
-@import '../core/loader';
+// Load Lib CSS
+@import '../../../lib/scss/home/loader';
+
+// Load Theme Core
+@import '../theme/loader';
