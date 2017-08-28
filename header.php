@@ -15,6 +15,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<?php // @TODO - Implement webfontloader ?>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,300i,600" rel="stylesheet">
 <?php get_template_part( 'template-parts/header-includes' ); ?>
 
 <?php wp_head(); ?>
