@@ -1,0 +1,17 @@
+.site-main {
+	display: flex;
+	justify-content: space-around;
+
+	@include breakpoints(none, medium) {
+		flex-direction: column;
+	}
+}
+
+.post-archive,
+.widget-area {
+	@include vertical-rhythym(2em);
+}
+
+.widget-area {
+	width: 20em;
+}
