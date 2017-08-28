@@ -14,3 +14,12 @@
 @function spacer($units) {
 	@return ( $units * 1rem );
 }
+
+// Link hover effect
+@mixin link-hover() {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

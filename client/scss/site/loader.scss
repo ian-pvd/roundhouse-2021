@@ -2,3 +2,10 @@
 
 // Load Lib CSS
 @import '../../../lib/scss/site/loader';
+
+// Load Theme Core
+@import '../core/loader';
+
+// Load Global Site Styles
+@import 'site';
+@import 'site-header';

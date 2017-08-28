@@ -8,8 +8,7 @@
 
 // Links
 a {
-	@extend %link-hover;
-	color: $color-primary;
+	@include link-hover;
 	font-weight: 700;
 
 	img {
@@ -24,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-	font: $font-header;
+	font: 700 1.5rem/#{calc(5/3)} sans-serif;
 }
 
 // Typography

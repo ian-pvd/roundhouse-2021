@@ -2,3 +2,15 @@
 
 // Load Lib CSS
 @import '../../../lib/scss/article/loader';
+
+// Load Theme Core
+@import '../core/loader';
+
+// Load Article Styles
+@import 'post-header';
+
+// Wrap Post Content Import
+.post-content {
+
+	@import 'wp-content';
+}

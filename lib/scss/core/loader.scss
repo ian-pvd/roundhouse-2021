@@ -1,6 +1,9 @@
 /* Core SCSS */
 
-@import 'variables';
+// Base Unit
+$base-unit: 16;
+
+// Import Core
 @import 'utilities';
 @import 'breakpoints';
 @import 'layout';
@@ -8,11 +11,3 @@
 @import 'colors';
 @import 'z-index';
 @import 'typography';
-
-// Load Theme Defaults
-@import 'theme-defaults';
-
-// Load Theme Overrides
-@import '../theme/variables';
-@import '../theme/options';
-@import '../theme/utilities';
