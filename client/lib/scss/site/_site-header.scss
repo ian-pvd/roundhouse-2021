@@ -1,8 +1,8 @@
 /* Site Header */
 
 .site-header {
-	background-color: color(black);
-	border-bottom: none;
+	background-color: color(white);
+	border-bottom: 1px solid color(black);
 	display: flex;
 	height: $height--site-header;
 	margin-bottom: $margin-bottom--site-header;
