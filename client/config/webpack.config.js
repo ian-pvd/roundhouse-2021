@@ -10,7 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Path definitions
 const buildRoot = path.resolve(__dirname, '../../');
-const appRoot = path.join(buildRoot, 'client/js/app');
+const appRoot = path.join(buildRoot, 'client/theme/js/app');
 
 // Theme name
 const themename = path.join(__dirname, '../../').match(/([^\/]*)\/*$/)[1];
@@ -54,18 +54,18 @@ module.exports = function(env) {
 
   return {
     entry: processEntry(
-      // Default
+      // Default Theme Entry Point
       {
-        site: ['client/js/site/site.js'],
+       site: ['client/src/js/site/site.js'],
       },
-
-      // Custom Package entry points
+      
+      // Custom Theme Entry Points
       {
-        admin: ['client/js/admin/admin.js'],
-        archive: ['client/js/archive/archive.js'],
-        article: ['client/js/article/article.js'],
-        home: ['client/js/home/home.js'],
-        page: ['client/js/page/page.js'],
+        admin: ['client/src/js/admin/admin.js'],
+        archive: ['client/src/js/archive/archive.js'],
+        article: ['client/src/js/article/article.js'],
+        home: ['client/src/js/home/home.js'],
+        page: ['client/src/js/page/page.js'],
       },
 
       // Environment Info & Single Entry Point

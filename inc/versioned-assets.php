@@ -8,19 +8,19 @@
 */
 function brigada71_get_versioned_asset( $asset ) {
 	$assets = array(
-		'site-js' => 'js/site.c7d2347.bundle.min.js',
-		'site-css' => 'css/site.c5d7352c55647a103a4d.min.css',
-		'page-js' => 'js/page.c7d2347.bundle.min.js',
-		'page-css' => 'css/page.c5d7352c55647a103a4d.min.css',
-		'home-js' => 'js/home.c7d2347.bundle.min.js',
-		'home-css' => 'css/home.c5d7352c55647a103a4d.min.css',
-		'article-js' => 'js/article.c7d2347.bundle.min.js',
-		'article-css' => 'css/article.c5d7352c55647a103a4d.min.css',
-		'archive-js' => 'js/archive.c7d2347.bundle.min.js',
-		'archive-css' => 'css/archive.c5d7352c55647a103a4d.min.css',
-		'admin-js' => 'js/admin.c7d2347.bundle.min.js',
-		'admin-css' => 'css/admin.c5d7352c55647a103a4d.min.css',
-		'common-js' => 'js/common.c7d2347.bundle.min.js',
+		'site-js' => 'js/site.8313298.bundle.min.js',
+		'site-css' => 'css/site.a7c98e13facd94fa3eaa.min.css',
+		'page-js' => 'js/page.8313298.bundle.min.js',
+		'page-css' => 'css/page.a7c98e13facd94fa3eaa.min.css',
+		'home-js' => 'js/home.8313298.bundle.min.js',
+		'home-css' => 'css/home.a7c98e13facd94fa3eaa.min.css',
+		'article-js' => 'js/article.8313298.bundle.min.js',
+		'article-css' => 'css/article.a7c98e13facd94fa3eaa.min.css',
+		'archive-js' => 'js/archive.8313298.bundle.min.js',
+		'archive-css' => 'css/archive.a7c98e13facd94fa3eaa.min.css',
+		'admin-js' => 'js/admin.8313298.bundle.min.js',
+		'admin-css' => 'css/admin.a7c98e13facd94fa3eaa.min.css',
+		'common-js' => 'js/common.8313298.bundle.min.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }

@@ -1,0 +1,25 @@
+/* SCSS Utilities
+ *
+ * Helper mixins and functions for use throughout the theme
+ */
+
+@function rem($px, $base: $base-unit) {
+	// TODO, check if value is valid
+	//   1. a number
+	//   2. unitless
+	@return calc(#{$px}/#{$base}rem);
+}
+
+// Space using rem grid.
+@function spacer($units) {
+	@return ( $units * 1rem );
+}
+
+// Link hover effect
+@mixin link-hover() {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

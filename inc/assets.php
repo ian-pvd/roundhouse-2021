@@ -22,9 +22,10 @@ function brigada71_enqueue_assets() {
 			false
 		);
 	} else {
-		wp_enqueue_style( 'brigada71-site-css', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'site-css' ), array(), '1.0' );
+
 		wp_enqueue_script( 'brigada71-common-js', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'common-js' ), array(), '1.0' );
 		wp_enqueue_script( 'brigada71-site-js', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'site-js' ), array( 'brigada71-common-js' ), '1.0' );
+		wp_enqueue_style( 'brigada71-site-css', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'site-css' ), array(), '1.0' );
 		wp_enqueue_script( 'brigada71-article-js', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'article-js' ), array( 'brigada71-common-js' ), '1.0' );
 		wp_enqueue_style( 'brigada71-article-css', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'article-css' ), array(), '1.0' );
 
@@ -43,13 +44,9 @@ function brigada71_enqueue_assets() {
 		if ( is_archive() ) {
 			wp_enqueue_script( 'brigada71-archive-js', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'archive-js' ), array( 'brigada71-common-js' ), '1.0' );
 			wp_enqueue_style( 'brigada71-archive-css', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'archive-css' ), array(), '1.0' );
-			wp_enqueue_script( 'brigada71-article-js', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'article-js' ), array( 'brigada71-common-js' ), '1.0' );
-			wp_enqueue_style( 'brigada71-article-css', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'article-css' ), array(), '1.0' );
-		}
+			}
 
 		if ( is_page() ) {
-			wp_enqueue_script( 'brigada71-article-js', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'article-js' ), array( 'brigada71-common-js' ), '1.0' );
-			wp_enqueue_style( 'brigada71-article-css', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'article-css' ), array(), '1.0' );
 			wp_enqueue_script( 'brigada71-page-js', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'page-js' ), array( 'brigada71-common-js' ), '1.0' );
 			wp_enqueue_style( 'brigada71-page-css', get_template_directory_uri() . '/static/' . brigada71_get_versioned_asset( 'page-css' ), array(), '1.0' );
 		}
