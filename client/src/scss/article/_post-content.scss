@@ -1,8 +1,0 @@
-.post-content {
-	@include vertical-rhythym(1em);
-	margin-bottom: spacer(2);
-
-	> * {
-		max-width: 100%;
-	}
-}
