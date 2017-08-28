@@ -54,7 +54,7 @@ module.exports = function(env) {
 
   return {
     entry: processEntry(
-      // Lib Theme Entry Points
+      // Default Theme Entry Point
       {
        site: ['client/js/site/site.js'],
       },

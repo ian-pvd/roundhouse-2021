@@ -27,7 +27,5 @@ $font-families: map-merge($font-families, $custom-font-families);
 
 // Custom Z-Index
 // @see `../core/_z-index.scss`
-$custom-z-index: (
-	site-header: 10,
-);
+$custom-z-index: ();
 $z-index: map-merge($z-index, $custom-z-index);

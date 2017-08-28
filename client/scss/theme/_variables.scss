@@ -1,12 +1,34 @@
-/* Theme Variable Overrides
+/* Theme Values
  *
- * Custom values for theme variables.
- * Overrides defaults in `../core/_variables.scss`
+ * Default values for theme variables.
+ * Override these options in `../theme/options.scss`
  */
 
 // Base unit in px
 // @see `../core/_variables.scss`
 $base-unit: 16;
+
+// Default Colors
+// see `./_colors.scss`
+
+// Default Project Colors
+$color-primary: color(green-dark);
+$color-secondary: color(red-dark);
+$color-tertiary: color(grey-dark);
+$color-highlight: color(red);
+
+// Default Font Families
+// see `./_typography.scss`
+
+// Default Project Fonts
+$font-body: 1rem/#{calc(4/3)} font-family(sans-serif);
+$font-header: 700 1.5rem/#{calc(5/3)} font-family(sans-serif);
+
+/* Theme Variable Overrides
+ *
+ * Custom values for theme variables.
+ * Overrides defaults in `../core/_variables.scss`
+ */
 
 // Theme Vars
 $height--site-header-content: rem(26);
