@@ -23,3 +23,30 @@
 		text-decoration: underline;
 	}
 }
+
+// Aspect Ratio
+@mixin aspect-ratio($width: 3, $height: 2) {
+	height: 0;
+	overflow: hidden;
+	padding-top: calc( ( #{$height} / #{$width} ) * 100%);
+	position: relative;
+	width: 100%;
+}
+
+// Absolute Pinned
+@mixin absolute-pinned() {
+	bottom: 0;
+	display: block;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+// Scale image to fill container
+@mixin image-fill() {
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 0;
+	width: 100%;
+}
