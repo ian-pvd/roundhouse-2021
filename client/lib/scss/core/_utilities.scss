@@ -43,6 +43,15 @@
 	top: 0;
 }
 
+// Absolute Center
+@mixin absolute-center() {
+	display: block;
+	position: absolute;
+	right: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
 // Scale image to fill container
 @mixin image-fill() {
 	height: 100%;
