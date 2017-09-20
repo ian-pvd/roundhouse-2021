@@ -2,8 +2,8 @@
 /**
  * External, vendor and third-party includes for the theme footer.
  *
- * @package brigada71
+ * @package roundhouse
  */
 
-?><!-- brigada71 footer includes -->
+?><!-- roundhouse footer includes -->
 <!-- Ex: GA Scripts -->

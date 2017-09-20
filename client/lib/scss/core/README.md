@@ -1,4 +1,4 @@
-# Brigada71 Theme SCSS Core
+# Roundhouse Theme SCSS Core
 
 These files contain generic values & helper functions to be used throughout the theme.
 

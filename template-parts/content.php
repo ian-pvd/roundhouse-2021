@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package brigada71
+ * @package roundhouse
  */
 
 ?>
@@ -20,7 +20,7 @@
 		endif;
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="post-meta">
-			<?php brigada71_posted_on(); ?>
+			<?php roundhouse_posted_on(); ?>
 		</div><!-- .post-meta -->
 		<?php
 		endif; ?>
@@ -39,7 +39,7 @@
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'brigada71' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'roundhouse' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,13 +50,13 @@
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'brigada71' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'roundhouse' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .post-content -->
 
 	<footer class="post-footer">
-		<?php brigada71_entry_footer(); ?>
+		<?php roundhouse_entry_footer(); ?>
 	</footer><!-- .post-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

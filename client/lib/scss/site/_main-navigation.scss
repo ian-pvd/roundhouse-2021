@@ -17,7 +17,7 @@
 		margin-left: auto;
 	}
 
-	ul {
+	.menu {
 		display: flex;
 
 		> li {
@@ -43,8 +43,7 @@
 
 /* Priority Nav main navigation */
 .main-navigation--priority-nav {
-	ul {
-		display: flex;
+	.menu {
 		flex-wrap: wrap;
 		justify-content: flex-end;
 		max-height: $height--site-header-content;

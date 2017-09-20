@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package brigada71
+ * @package roundhouse
  */
 
 get_header(); ?>

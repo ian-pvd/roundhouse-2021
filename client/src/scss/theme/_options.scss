@@ -19,10 +19,7 @@ $colors: map-merge($colors, $custom-colors);
 
 // Custom Font Families
 // @see `../core/_typography.scss`
-$custom-font-families: (
-	sans-serif: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-	header: "'Montserrat'"
-);
+$custom-font-families: ();
 $font-families: map-merge($font-families, $custom-font-families);
 
 // Custom Project Fonts
