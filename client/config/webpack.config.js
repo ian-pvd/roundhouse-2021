@@ -1,5 +1,5 @@
 /**
- * Hollywood Life Webpack Config
+ * Roundhouse Webpack Config
  */
 
 // Webpack dependencies

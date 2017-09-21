@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package brigada71
+ * @package roundhouse
  */
 
 get_header(); ?>

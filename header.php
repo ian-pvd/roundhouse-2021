@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package brigada71
+ * @package roundhouse
  */
 
 ?><!doctype html>
@@ -15,8 +15,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<?php // @TODO - Implement webfontloader ?>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,300i,600" rel="stylesheet">
 <?php get_template_part( 'template-parts/header-includes' ); ?>
 
 <?php wp_head(); ?>
@@ -24,12 +22,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'brigada71' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'roundhouse' ); ?></a>
 
 	<header id="masthead" class="site-header site-header--sticky" role="banner">
 		<div class="site-branding">
 			<?php
-			brigada71_site_title();
+			roundhouse_site_title();
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
@@ -39,7 +37,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation main-navigation--priority-nav" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'brigada71' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'roundhouse' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
