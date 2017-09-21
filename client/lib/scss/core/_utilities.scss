@@ -59,3 +59,14 @@
 	object-position: 50% 0;
 	width: 100%;
 }
+
+// Scale image to fill container
+@function letter-spacing($spacing: 100) {
+	@return calc( #{$spacing} / 1000em );
+}
+
+/* SCSS Dev Utilities */
+@mixin dev-block($color: red, $background: rgba(255,255,0,0.1), $outline: 1px dotted $color) {
+	outline: $outline;
+	background: $background;
+}
