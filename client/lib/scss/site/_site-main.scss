@@ -9,7 +9,7 @@
 
 .post-archive,
 .widget-area {
-	@include vertical-rhythym(2em);
+	@include vertical-rhythym(spacer(3));
 }
 
 .widget-area {

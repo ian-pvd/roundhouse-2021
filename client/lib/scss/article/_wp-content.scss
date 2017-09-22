@@ -69,7 +69,7 @@ li {
 }
 
 dl {
-	@include vertical-rhythym(0.5em);
+	@include vertical-rhythym(spacer(0.5));
 }
 
 dt {

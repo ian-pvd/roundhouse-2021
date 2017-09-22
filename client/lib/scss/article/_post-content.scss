@@ -4,7 +4,7 @@
  */
 
 .post-content {
-	@include vertical-rhythym(1em);
+	@include vertical-rhythym();
 	margin-bottom: spacer(2);
 
 	> * {

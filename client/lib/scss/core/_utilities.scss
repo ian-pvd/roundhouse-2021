@@ -3,6 +3,11 @@
  * Helper mixins and functions for use throughout the theme
  */
 
+/* Functions
+ *
+ */
+
+// Return px value as rem.
 @function rem($px, $base: $base-unit) {
 	// TODO, check if value is valid
 	//   1. a number
@@ -14,6 +19,15 @@
 @function spacer($units) {
 	@return ( $units * 1rem );
 }
+
+// PS style letter spacing based on 1000 value
+@function letter-spacing($spacing: 100) {
+	@return calc( #{$spacing} / 1000em );
+}
+
+/* Mixins
+ *
+ */
 
 // Link hover effect
 @mixin link-hover() {
@@ -60,12 +74,32 @@
 	width: 100%;
 }
 
-// Scale image to fill container
-@function letter-spacing($spacing: 100) {
-	@return calc( #{$spacing} / 1000em );
+// Display pseudo element as block
+@mixin pseudo-block($height: 1em, $width: 1em) {
+	content: '';
+	display: block;
+	height: $height;
+	width: $width;
 }
 
-/* SCSS Dev Utilities */
+// Horizontal Separator
+@mixin separator($character: '|', $spacing: spacer(1)) {
+	&::after {
+		content: $character;
+		margin: 0 $spacing;
+	}
+
+	&:last-child {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+/* SCSS Dev Utilities
+ *
+ */
+
 @mixin dev-block($color: red, $background: rgba(255,255,0,0.1), $outline: 1px dotted $color) {
 	outline: $outline;
 	background: $background;
