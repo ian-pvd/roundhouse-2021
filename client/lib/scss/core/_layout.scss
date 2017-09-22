@@ -13,6 +13,7 @@ $content-width: 36rem;
 $height--site-header-content: rem(26);
 $height--site-header: spacer(3);
 $margin-bottom--site-header: spacer(1);
+$border--dotted-light: 1px dotted fade-out(color(white), 0.75);
 
 /* SCSS Layout Utilities
  *
@@ -26,12 +27,16 @@ $margin-bottom--site-header: spacer(1);
 }
 
 // Adds vertical spacing to all child elements but the last
-@mixin vertical-rhythym($spacing) {
+@mixin vertical-rhythym($margin: spacer(1), $padding: 0, $border: none) {
 	> * {
-		margin-bottom: $spacing;
+		border-bottom: $border;
+		margin-bottom: $margin;
+		padding-bottom: $padding;
 
 		&:last-child {
+			border-bottom: none;
 			margin-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
 }
