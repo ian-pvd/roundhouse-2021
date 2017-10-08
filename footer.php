@@ -10,7 +10,8 @@
  */
 
 ?>
-
+		</main><!-- #main -->
+		<?php roundhouse_get_sidebar(); ?>
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

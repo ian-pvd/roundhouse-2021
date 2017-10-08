@@ -25,3 +25,20 @@ function roundhouse_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'roundhouse_body_classes' );
+
+function roundhouse_get_sidebar( $sidebar ) {
+
+	/*
+	 * @TODO !!!
+	 *
+	 * if...
+	 * page is ?
+	 * post has ?
+	 * etc...
+	 *
+	 * then:
+	 * get_sidebar( some sidebar, some parameters );
+	 */
+
+	return get_sidebar( $sidebar );
+}
