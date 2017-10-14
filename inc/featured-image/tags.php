@@ -4,11 +4,11 @@
  *
  * Theme output tags
  *
- * @package blkmsk
+ * @package roundhouse
  */
 
 // Display the Featured Image
-function pvd_the_featured_image( $post_ID = null, $classes = [] ) {
+function pvd_the_featured_image( $classes = [] ) {
 
 	// v2 - Get theme options for Featured Images
 	$theme_options = pvd_get_featured_image_options();
@@ -69,7 +69,7 @@ function pvd_the_featured_image( $post_ID = null, $classes = [] ) {
 		</div>
 		<?php if ( isset( $caption ) && isset( $caption_classes ) ) : ?>
 		<figcaption class="<?php esc_attr_e( $caption_classes ); ?>">
-			<?php _e( $caption, 'blkmsk' ); ?>
+			<?php _e( $caption, 'roundhouse' ); ?>
 		</figcaption>
 		<?php endif; ?>
 	</figure>

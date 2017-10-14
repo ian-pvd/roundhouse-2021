@@ -4,7 +4,7 @@
  *
  * Fieldmanager fields config
  *
- * @package blkmsk
+ * @package roundhouse
  */
 
 /**
@@ -26,7 +26,7 @@ function pvd_fm_group_feature_image() {
 		'children' => [
 			'layout' => new Fieldmanager_Select( [
 				'limit' => 1,
-				'label' => __( 'Image Layout', 'blkmsk' ),
+				'label' => __( 'Image Layout', 'roundhouse' ),
 				'attributes' => [
 					'style' => 'width: 100%',
 				],
@@ -39,11 +39,11 @@ function pvd_fm_group_feature_image() {
 					],
 				] ),
 				'default_value' => 'standard',
-				'description' => __( '<ul><li>Fullbleed: 100% viewport width & height.</li><li>Wide: 100% site max width, 16:9 ratio.</li><li>Large: 100% page width, 3:2 ratio.</li><li>Standard: Post width, as post content.</li></ul>', 'blkmsk' ),
+				'description' => __( '<ul><li>Fullbleed: 100% viewport width & height.</li><li>Wide: 100% site max width, 16:9 ratio.</li><li>Large: 100% page width, 3:2 ratio.</li><li>Standard: Post width, as post content.</li></ul>', 'roundhouse' ),
 				'escape' => [ 'description' => 'wp_kses_post' ],
 			] ),
 			'effects' => new Fieldmanager_Checkboxes( [
-				'label' => __( 'Image Effects', 'blkmsk' ),
+				'label' => __( 'Image Effects', 'roundhouse' ),
 				'datasource' => new Fieldmanager_Datasource( [
 					'options' => [
 						'grayscale' => 'Grayscale',
@@ -57,7 +57,7 @@ function pvd_fm_group_feature_image() {
 	] );
 
 	$fm->add_meta_box(
-		__( 'Featured Image Format', 'blkmsk' ),
+		__( 'Featured Image Format', 'roundhouse' ),
 		[ 'post', 'page' ],
 		'side',
 		'core'

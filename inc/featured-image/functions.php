@@ -4,7 +4,7 @@
  *
  * Theme handler functions
  *
- * @package blkmsk
+ * @package roundhouse
  */
 
 function pvd_get_featured_image_format() {

@@ -24,7 +24,7 @@
 
 	<?php
 		// Featured Image
-		pvd_the_featured_image( null, [ 'post-thumbnail' ] );
+		pvd_the_featured_image( [ 'post-thumbnail' ] );
 	?>
 
 	<div class="post-content">
