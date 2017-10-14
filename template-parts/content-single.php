@@ -23,12 +23,9 @@
 	</header><!-- .post-header -->
 
 	<?php
-	// check if the post has a Post Thumbnail assigned to it.
-	if ( has_post_thumbnail() ) {
-		?><div class="post-thumbnail"><?php
-		the_post_thumbnail();
-		?></div><?php
-	} ?>
+		// Featured Image
+		pvd_the_featured_image( null, [ 'post-thumbnail' ] );
+	?>
 
 	<div class="post-content">
 		<?php
