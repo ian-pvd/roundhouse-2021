@@ -42,6 +42,22 @@ function pvd_fm_group_feature_image() {
 				'description' => __( '<ul><li>Fullbleed: 100% viewport width & height.</li><li>Wide: 100% site max width, 16:9 ratio.</li><li>Large: 100% page width, 3:2 ratio.</li><li>Standard: Post width, as post content.</li></ul>', 'roundhouse' ),
 				'escape' => [ 'description' => 'wp_kses_post' ],
 			] ),
+			'align' => new Fieldmanager_Select( [
+				'limit' => 1,
+				'label' => __( 'Image Alignment', 'roundhouse' ),
+				'attributes' => [
+					'style' => 'width: 100%',
+				],
+				'datasource' => new Fieldmanager_Datasource( [
+					'options' => [
+						'top' => 'Top',
+						'middle' => 'Middle',
+						'bottom' => 'Bottom',
+					],
+				] ),
+				'default_value' => 'top',
+				'description' => __( 'Vertical photo alignment, if cropped.', 'roundhouse' ),
+			] ),
 			'effects' => new Fieldmanager_Checkboxes( [
 				'label' => __( 'Image Effects', 'roundhouse' ),
 				'datasource' => new Fieldmanager_Datasource( [

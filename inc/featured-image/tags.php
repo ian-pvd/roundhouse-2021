@@ -33,10 +33,17 @@ function pvd_the_featured_image( $classes = [] ) {
 	if ( isset( $featured_image['layout'] ) && $theme_options['image_layouts'] ) {
 		$image_classes[] = 'featured-image-layout--' . $featured_image[ 'layout' ];
 	} else {
-		$image_classes[] = 'featured-image-layout--' . 'standard';
+		$image_classes[] = 'featured-image-layout--standard';
 	}
 
-	// Add Featured Image treatment options
+	// Add Featured Image alignment class
+	if ( isset( $featured_image['align'] ) && $theme_options['image_alignment'] ) {
+		$image_classes[] = 'featured-image-align--' . $featured_image[ 'align' ];
+	} else {
+		$image_classes[] = 'featured-image-align--top';
+	}
+
+	// Add Featured Image effect classes
 	if ( ! empty( $featured_image['effects'] ) && $theme_options['image_effects'] ) {
 		foreach ($featured_image['effects'] as $effect) {
 			$image_classes[] = 'image-effect--' . $effect;
