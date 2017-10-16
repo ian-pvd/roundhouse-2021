@@ -1,0 +1,114 @@
+.post-thumbnail {
+	margin-bottom: 1em;
+}
+
+/* Image Layout Styles */
+// Layout Full
+.featured-image-layout--full {
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	overflow: hidden;
+
+	.featured-image__frame {
+		@include absolute-pinned();
+	}
+
+	img {
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
+	}
+}
+
+.featured-image-layout--wide {
+	left: 50%;
+	max-width: $site-width;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	width: 100%;
+
+	.featured-image__frame {
+		@include aspect-ratio(16, 9);
+	}
+
+	img {
+		@include absolute-pinned();
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+.featured-image-layout--large {
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	width: $site-width;
+	overflow: hidden;
+
+	.featured-image__frame {
+		@include aspect-ratio(3, 2);
+	}
+
+	img {
+		@include absolute-pinned();
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+.featured-image-layout--standard {
+	width: 100%;
+
+	img {
+		margin: 0 auto;
+	}
+}
+
+/* Image Alignment Styles */
+img {
+	.featured-image-layout--full.featured-image-align--top & {
+		object-position: 50% 0%;
+	}
+
+	.featured-image-layout--full.featured-image-align--middle & {
+		object-position: 50% 50%;
+	}
+
+	.featured-image-layout--full.featured-image-align--bottom & {
+		object-position: 50% 100%;
+	}
+
+	.featured-image-layout--wide.featured-image-align--top &,
+	.featured-image-layout--large.featured-image-align--top & {
+		top: 0;
+	}
+
+	.featured-image-layout--wide.featured-image-align--middle &,
+	.featured-image-layout--large.featured-image-align--middle & {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.featured-image-layout--wide.featured-image-align--bottom &,
+	.featured-image-layout--large.featured-image-align--bottom & {
+		top: auto;
+		bottom: 0;
+	}
+}
+
+/* Empty Image Frame Styles */
+.featured-image--empty {
+	&.featured-image-layout--standard {
+		.featured-image__frame {
+			@include aspect-ratio();
+			position: relative;
+			width: 100%;
+		}
+	}
+}

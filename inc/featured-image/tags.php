@@ -50,6 +50,11 @@ function pvd_the_featured_image( $classes = [] ) {
 		}
 	}
 
+	// Add no-image class for placeholder frames
+	if ( empty( $thumbnail_id ) && $theme_options['show_empty'] ) {
+		$image_classes[] = 'featured-image--empty';
+	}
+
 	// Merge array of Featured Image classes
 	$image_classes = implode( ' ', array_merge( $classes, $image_classes ) );
 
