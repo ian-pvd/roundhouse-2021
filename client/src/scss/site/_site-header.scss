@@ -1,3 +1,73 @@
+/* Site Header */
+
+.network-bar {
+	background: black;
+	font-size: rem(12);
+	font-weight: 700;
+	color: white;
+	text-transform: lowercase;
+
+	a {
+		@include link-hover();
+		color: inherit;
+	}
+
+	ul {
+		display: flex;
+		margin: 0 0 0 spacer(1);
+
+		li {
+			@include separator('', spacer(0.5));
+		}
+	}
+}
+
+.wrapper {
+	.network-bar &,
+	.site-header & {
+		align-items: center;
+		display: flex;
+		margin: 0 auto;
+		max-width: $site-width;
+		padding: spacer(0.5) spacer(1);
+		width: 100%;
+	}
+}
+
+.site-header {
+	display: block;
+	padding: 0;
+	background-color: $color-primary;
+	box-shadow: 0 0 8px rgba(0,0,0,0.25);
+	height: $height--site-header;
+	margin-bottom: $margin-bottom--site-header;
+}
+
+.site-header--sticky {
+	& ~ .site-content {
+		padding-top: $height--site-header + $margin-bottom--site-header;
+	}
+}
+
 .site-title {
-	font: $font-header;
+	background-image: url('../../img/antifainfo-logo.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	height: $height--site-header-content;
+	width: spacer(12);
+}
+
+.site-logo {
+	img,
+	svg {
+		height: $height--site-header-content;
+	}
+}
+
+.site-description {
+	display: none;
 }

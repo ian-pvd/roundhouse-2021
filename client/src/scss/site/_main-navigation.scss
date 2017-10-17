@@ -1,0 +1,13 @@
+/*
+ * Main Navigation
+ */
+
+.main-navigation {
+	a {
+		@include link-hover;
+		color: white;
+		text-shadow: 1px 1px 0 rgb(128,0,0);
+		font-weight: 700;
+		font-size: 18px;
+	}
+}

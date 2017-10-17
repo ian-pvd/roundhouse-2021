@@ -8,19 +8,19 @@
 */
 function antifainfo_get_versioned_asset( $asset ) {
 	$assets = array(
-		'site-js' => 'js/site.fab33fa.bundle.min.js',
-		'site-css' => 'css/site.b988a4112e32cff3265a.min.css',
-		'page-js' => 'js/page.fab33fa.bundle.min.js',
-		'page-css' => 'css/page.b988a4112e32cff3265a.min.css',
-		'home-js' => 'js/home.fab33fa.bundle.min.js',
-		'home-css' => 'css/home.b988a4112e32cff3265a.min.css',
-		'article-js' => 'js/article.fab33fa.bundle.min.js',
-		'article-css' => 'css/article.b988a4112e32cff3265a.min.css',
-		'archive-js' => 'js/archive.fab33fa.bundle.min.js',
-		'archive-css' => 'css/archive.b988a4112e32cff3265a.min.css',
-		'admin-js' => 'js/admin.fab33fa.bundle.min.js',
-		'admin-css' => 'css/admin.b988a4112e32cff3265a.min.css',
-		'common-js' => 'js/common.fab33fa.bundle.min.js',
+		'site-js' => 'js/site.bundle.js',
+		'site-css' => 'css/site.css',
+		'page-js' => 'js/page.bundle.js',
+		'page-css' => 'css/page.css',
+		'home-js' => 'js/home.bundle.js',
+		'home-css' => 'css/home.css',
+		'article-js' => 'js/article.bundle.js',
+		'article-css' => 'css/article.css',
+		'archive-js' => 'js/archive.bundle.js',
+		'archive-css' => 'css/archive.css',
+		'admin-js' => 'js/admin.bundle.js',
+		'admin-css' => 'css/admin.css',
+		'common-js' => 'js/common.bundle.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }

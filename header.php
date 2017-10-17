@@ -24,27 +24,39 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'antifainfo' ); ?></a>
 
-	<header id="masthead" class="site-header site-header--sticky" role="banner">
-		<div class="site-branding">
-			<?php
-			antifainfo_site_title();
+	<div id="network-bar" class="network-bar">
+		<div class="wrapper network-bar__wrapper">
+			solidarity network:
+			<ul>
+				<li><a href="">Torch Antifa</a></li>
+				<li><a href="">International Anti-fascist Defence Fund</a></li>
+			</ul>
+		</div>
+	</div>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+	<header id="masthead" class="site-header" role="banner">
+		<div class="wrapper site-header__wrapper">
+			<div class="site-branding">
+				<?php
+				antifainfo_site_title();
 
-		<nav id="site-navigation" class="main-navigation main-navigation--priority-nav" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'antifainfo' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif; ?>
+			</div><!-- .site-branding -->
+
+			<nav id="site-navigation" class="main-navigation main-navigation--priority-nav" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'antifainfo' ); ?></button>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

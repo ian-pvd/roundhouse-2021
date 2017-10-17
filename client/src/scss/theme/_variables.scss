@@ -12,7 +12,7 @@ $base-unit: 16;
 // see `./_colors.scss`
 
 // Default Project Colors
-$color-primary: color(green-dark);
+$color-primary: rgb(161,0,0);
 $color-secondary: color(red-dark);
 $color-tertiary: color(grey-dark);
 $color-highlight: color(red);
@@ -31,6 +31,6 @@ $font-header: 700 1.5rem/#{calc(5/3)} font-family(sans-serif);
  */
 
 // Theme Vars
-$height--site-header-content: rem(26);
-$height--site-header: spacer(3);
+$height--site-header-content: spacer(3);
+$height--site-header: spacer(4);
 $margin-bottom--site-header: spacer(1);
