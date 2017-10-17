@@ -1,6 +1,6 @@
 {
-  "name": "roundhouse",
-  "description": "roundhouse front end build system",
+  "name": "antifainfo",
+  "description": "antifainfo front end build system",
   "version": "1.0.1",
   "private": true,
   "scripts": {

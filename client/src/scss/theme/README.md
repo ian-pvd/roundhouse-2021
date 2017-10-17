@@ -1,4 +1,4 @@
-# Roundhouse Theme SCSS Core
+# Antifa Info Theme SCSS Core
 
 These files contain generic values & helper functions to be used throughout the theme.
 

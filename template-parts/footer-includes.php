@@ -2,8 +2,8 @@
 /**
  * External, vendor and third-party includes for the theme footer.
  *
- * @package roundhouse
+ * @package antifainfo
  */
 
-?><!-- roundhouse footer includes -->
+?><!-- antifainfo footer includes -->
 <!-- Ex: GA Scripts -->

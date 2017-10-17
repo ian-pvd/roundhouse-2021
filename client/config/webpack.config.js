@@ -1,5 +1,5 @@
 /**
- * Roundhouse Webpack Config
+ * Antifa Info Webpack Config
  */
 
 // Webpack dependencies

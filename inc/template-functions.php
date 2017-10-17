@@ -2,7 +2,7 @@
 /**
  * Additional features to allow styling of the templates
  *
- * @package roundhouse
+ * @package antifainfo
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function roundhouse_body_classes( $classes ) {
+function antifainfo_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -24,4 +24,4 @@ function roundhouse_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'roundhouse_body_classes' );
+add_filter( 'body_class', 'antifainfo_body_classes' );

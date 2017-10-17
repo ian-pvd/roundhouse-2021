@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package roundhouse
+ * @package antifainfo
  */
 
 ?>
@@ -16,7 +16,7 @@
 			the_title( '<h1 class="post-title">', '</h1>' );
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="post-meta">
-				<?php roundhouse_posted_on(); ?>
+				<?php antifainfo_posted_on(); ?>
 			</div><!-- .post-meta -->
 		<?php
 		endif; ?>
@@ -35,7 +35,7 @@
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'roundhouse' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'antifainfo' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -46,13 +46,13 @@
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'roundhouse' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'antifainfo' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .post-content -->
 
 	<footer class="post-footer">
-		<?php roundhouse_entry_footer(); ?>
+		<?php antifainfo_entry_footer(); ?>
 	</footer><!-- .post-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
