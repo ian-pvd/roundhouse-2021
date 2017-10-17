@@ -1,3 +1,15 @@
+/* Site Header */
+
+.site-header {
+	background-color: color(white);
+	border-bottom: 1px solid color(black);
+}
+
 .site-title {
 	font: $font-header;
+	letter-spacing: 0.0125em;
+}
+
+.site-description {
+	border-left: 1px solid color(grey-dark);
 }
