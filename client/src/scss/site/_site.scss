@@ -3,6 +3,38 @@
  * Global layout and base styles
  */
 
+html {
+	overflow-x: hidden;
+	max-width: 100vw;
+	font-size: calc((#{$base-unit}/16) * 100%);
+}
+
 body {
 	font: $font-body;
+
+	@include breakpoints(none, medium) {
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+}
+
+html,
+body,
+.site {
+	height: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.site {
+	display: flex;
+	flex-direction: column;
+}
+
+.content-area {
+	width: 100%;
+	max-width: $content-width;
 }

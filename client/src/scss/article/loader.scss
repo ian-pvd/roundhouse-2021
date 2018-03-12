@@ -1,13 +1,12 @@
 /* Article CSS */
 
-// Load Lib CSS
-@import '../../../lib/scss/article/loader';
-
 // Load Theme Core
 @import '../theme/loader';
 
 // Load Article Styles
+@import 'feature-image';
 @import 'post-header';
+@import 'post-content';
 
 // Wrap Post Content Import
 .post-content {
