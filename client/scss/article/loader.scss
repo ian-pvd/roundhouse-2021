@@ -7,8 +7,9 @@
 @import '../theme/loader';
 
 // Load Article Styles
-@import 'feature-image';
 @import 'post-header';
+@import 'feature-image';
+@import 'image-effects';
 @import 'post-content';
 
 // Wrap Post Content Import
