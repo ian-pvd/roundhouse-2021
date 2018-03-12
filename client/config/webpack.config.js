@@ -24,7 +24,7 @@ const processPlugins = require('./processPlugins');
 
 module.exports = function(env) {
   env.singleEntry = process.env.ENTRY || false;
-  
+
   // Define postCSS plugin options
   const postCSSPlugins = function (webpack) {
     return [
@@ -56,16 +56,16 @@ module.exports = function(env) {
     entry: processEntry(
       // Default Theme Entry Point
       {
-       site: ['client/src/js/site/site.js'],
+       site: ['client/js/site/site.js'],
       },
-      
+
       // Custom Theme Entry Points
       {
-        admin: ['client/src/js/admin/admin.js'],
-        archive: ['client/src/js/archive/archive.js'],
-        article: ['client/src/js/article/article.js'],
-        home: ['client/src/js/home/home.js'],
-        page: ['client/src/js/page/page.js'],
+        admin: ['client/js/admin/admin.js'],
+        archive: ['client/js/archive/archive.js'],
+        article: ['client/js/article/article.js'],
+        home: ['client/js/home/home.js'],
+        page: ['client/js/page/page.js'],
       },
 
       // Environment Info & Single Entry Point

@@ -1,0 +1,57 @@
+/*
+ * Post Single Feature Image Styles
+ */
+
+.post-thumbnail {
+	margin-bottom: 1em;
+}
+
+.feature-image--full,
+.feature-image--wide {
+	.post-thumbnail {
+		position: absolute;
+		top: $height--site-header;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 0;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.feature-image--full {
+	.site-main {
+		padding-top: 100vh;
+	}
+
+	.post-thumbnail {
+		width: 100vw;
+		height: 100vh;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.feature-image--wide {
+	.site-main {
+		padding-top: calc(#{$site-width} * (9 / 16));
+	}
+
+	.post-thumbnail {
+		width: $site-width;
+		height: 0;
+		padding-top: calc((9 / 16) * #{$site-width});
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
