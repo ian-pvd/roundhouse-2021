@@ -8,19 +8,19 @@
 */
 function roundhouse_get_versioned_asset( $asset ) {
 	$assets = array(
-		'site-js' => 'js/site.616e18e.bundle.min.js',
-		'site-css' => 'css/site.f68defa00b31022de4d3.min.css',
-		'page-js' => 'js/page.616e18e.bundle.min.js',
-		'page-css' => 'css/page.f68defa00b31022de4d3.min.css',
-		'home-js' => 'js/home.616e18e.bundle.min.js',
-		'home-css' => 'css/home.f68defa00b31022de4d3.min.css',
-		'article-js' => 'js/article.616e18e.bundle.min.js',
-		'article-css' => 'css/article.f68defa00b31022de4d3.min.css',
-		'archive-js' => 'js/archive.616e18e.bundle.min.js',
-		'archive-css' => 'css/archive.f68defa00b31022de4d3.min.css',
-		'admin-js' => 'js/admin.616e18e.bundle.min.js',
-		'admin-css' => 'css/admin.f68defa00b31022de4d3.min.css',
-		'common-js' => 'js/common.616e18e.bundle.min.js',
+		'site-js' => 'js/site.bundle.js',
+		'site-css' => 'css/site.css',
+		'page-js' => 'js/page.bundle.js',
+		'page-css' => 'css/page.css',
+		'home-js' => 'js/home.bundle.js',
+		'home-css' => 'css/home.css',
+		'article-js' => 'js/article.bundle.js',
+		'article-css' => 'css/article.css',
+		'archive-js' => 'js/archive.bundle.js',
+		'archive-css' => 'css/archive.css',
+		'admin-js' => 'js/admin.bundle.js',
+		'admin-css' => 'css/admin.css',
+		'common-js' => 'js/common.bundle.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }
