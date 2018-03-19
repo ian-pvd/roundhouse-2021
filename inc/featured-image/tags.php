@@ -126,18 +126,24 @@ function pvd_the_featured_image( $classes = [] ) {
 add_filter( 'body_class','pvd_featured_image_body_class' );
 function pvd_featured_image_body_class( $body_classes ) {
 
+	// If it's not a single post or single page
+	if ( ! is_singular() ) {
+		// don't add classes:
+		return $body_classes;
+	}
+
 	// v2 - Get theme options for Featured Images
 	$theme_options = pvd_get_featured_image_options();
 
 	// Get the Featured Image format array
 	$featured_image = pvd_get_featured_image_format();
 
-    // Add Featured Image layout class
+	// Add Featured Image layout class
 	if ( isset( $featured_image['layout'] ) && $theme_options['image_layouts'] ) {
 		$body_classes[] = 'body__featured-image-layout--' . $featured_image[ 'layout' ];
 	} else {
 		$body_classes[] = 'body__featured-image-layout--standard';
 	}
 
-    return $body_classes;
+	return $body_classes;
 }
