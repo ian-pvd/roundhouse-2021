@@ -1,4 +1,18 @@
-# Roundhouse Theme SCSS Core
+# Roundhouse Theme Core
+
+This theme uses:
+* Webpack
+* SCSS
+* StyleLint
+* ESLint
+* See Also: ../package.json
+
+## Webpack
+
+@ TODO — Detail webpack config settings.
+See: ./config/webpack.config.js
+
+## SCSS
 
 These files contain generic values & helper functions to be used throughout the theme.
 
@@ -9,7 +23,7 @@ These files contain generic values & helper functions to be used throughout the 
 	* BUG: "Any theme customizations and overrides (for theme colors or layout widths) should be added to `./theme-options.scss` or similar SCSS file in the `../site/` directory." This means that `site/theme-options.scss` will either need to also be added to each bundle, or moved to `core/`
 	* RESOLVED: `theme-options.scss` was moved to `core/`, and the readme was updated.
 
-## Theme Defaults - ./theme-defaults.scss
+### Theme Defaults - ./theme-defaults.scss
 * Contains default color, font, breakpoint and layout values.
 * This file contains fallback values and should not be edited directly when building a new theme.
 * Colors - `./_colors.scss`
@@ -20,7 +34,7 @@ These files contain generic values & helper functions to be used throughout the 
   * Adds a `font-family()` shortcut function to get font family values.
   * Because fonts use spaces and require single quotes, the standard font-families list should be wrapped in a set of double quotes.
 
-## Theme Customizations - ./theme-options.scss
+### Theme Customizations - ./theme-options.scss
 * File layout and properties should look similar to `./theme-defaults.scss`
 * Overrides default theme values. Should be updated in each new theme to make common style values available to all bundles.
   * Example: To overwrite the default value for the primary project color:
@@ -38,9 +52,9 @@ These files contain generic values & helper functions to be used throughout the 
     $font-families: map-merge($font-families, $custom-font-families);
     ````
     _(Note the double quotes around the font-families map value.)_
-    
+
     Now it is possible to use the new value via the `font-family()` map shortcut function elsewhere in the theme.
-    
+
     ````scss
     $font-cartoon: 1em font-family(script);
     ````
@@ -54,9 +68,9 @@ These files contain generic values & helper functions to be used throughout the 
     $font-families: map-merge($font-families, $custom-font-families);
     ````
     _(Note the double quotes around the font-families map value.)_
-    
+
     Now it is possible to use the override via the `font-family()` map shortcut function elsewhere in the theme.
-    
+
     ````scss
     $font-swiss: 1em font-family(sans-serif);
     ````
