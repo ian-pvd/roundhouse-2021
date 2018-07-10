@@ -1,4 +1,4 @@
 /* Home JS */
 
 // Home Styles
-import '../../scss/home/loader.scss';
+import '../../scss/home/index.scss';

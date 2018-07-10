@@ -4,22 +4,26 @@
  * Overrides defaults in `../core/` files.
  */
 
-// Custom Breakpoints
-// @see `../core/_breakpoints.scss`
+/* Custom Breakpoints
+ * @see `../core/_breakpoints.scss`
+ */
 $custom-breakpoints: ();
 $breakpoints: map-merge($breakpoints, $custom-breakpoints);
 
-// Custom Colors
-// @see `../core/_colors.scss`
+/* Custom Colors
+ * @see `../core/_colors.scss`
+ */
 $custom-colors: ();
 $colors: map-merge($colors, $custom-colors);
 
-// Custom Font Families
-// @see `../core/_typography.scss`
+/* Custom Font Families
+ * @see `../core/_typography.scss`
+ */
 $custom-font-families: ();
 $font-families: map-merge($font-families, $custom-font-families);
 
-// Custom Z-Index
-// @see `../core/_z-index.scss`
+/* Custom Z-Index
+ * @see `../core/_z-index.scss`
+ */
 $custom-z-index: ();
 $z-index: map-merge($z-index, $custom-z-index);

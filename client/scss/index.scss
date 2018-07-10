@@ -7,13 +7,7 @@
 $base-unit: 16;
 
 // Import Core
-@import 'core/utilities';
-@import 'core/breakpoints';
-@import 'core/colors';
-@import 'core/layout';
-@import 'core/grid';
-@import 'core/z-index';
-@import 'core/typography';
+@import 'core/index';
 
 // Load Theme Override Options
 @import 'theme/options';

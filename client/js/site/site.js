@@ -1,4 +1,4 @@
 /* Site JS */
 
 // Site Styles
-import '../../scss/site/loader.scss';
+import '../../scss/site/index.scss';

@@ -1,4 +1,4 @@
 /* Page JS */
 
 // Page Styles
-import '../../scss/page/loader.scss';
+import '../../scss/page/index.scss';

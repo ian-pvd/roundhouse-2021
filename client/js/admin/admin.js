@@ -1,4 +1,4 @@
 /* Admin JS */
 
 // Admin Styles
-import '../../scss/admin/loader.scss';
+import '../../scss/admin/index.scss';

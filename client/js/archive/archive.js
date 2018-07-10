@@ -1,4 +1,4 @@
 /* Archive JS */
 
 // Archive Styles
-import '../../scss/archive/loader.scss';
+import '../../scss/archive/index.scss';
