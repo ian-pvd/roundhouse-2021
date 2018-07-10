@@ -4,7 +4,7 @@ A multimedia blog theme.
 
 ## Theme Core
 
-Rounhouse is a wordpress theme.
+Rounhouse is a [WordPress theme](https://codex.wordpress.org/Theme_Development).
 
 For more information, see the code comments in `index.php` and `functions.php`
 

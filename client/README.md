@@ -10,67 +10,54 @@ This theme uses:
 ## Webpack
 
 @ TODO — Detail webpack config settings.
-See: ./config/webpack.config.js
+See: `./config/webpack.config.js`
 
 ## SCSS
 
-These files contain generic values & helper functions to be used throughout the theme.
+### SCSS Theme Core
+The styles for this theme are written in SCSS and leveage SCSS mixins, functions and variables. A set of helper functions, theme mixins and reusable values has been included in the the `scss/core` directory. These files do not output any CSS themselves, but are intended to be imported into each entry point when complied.
 
-* Values set in `./theme-defaults.scss` should be sensible defaults.
-* Any theme customizations and overrides (for theme colors or layout widths) should be added to `./_theme-options.scss`
-* Files in this `core/` directory should not write anything to compiled stylesheets.
-* All loader files in each bundle should import `../core/loader` to make use of these utilities.
-	* BUG: "Any theme customizations and overrides (for theme colors or layout widths) should be added to `./theme-options.scss` or similar SCSS file in the `../site/` directory." This means that `site/theme-options.scss` will either need to also be added to each bundle, or moved to `core/`
-	* RESOLVED: `theme-options.scss` was moved to `core/`, and the readme was updated.
+Core files include:
+* Utilities - SCSS helper functions.
+* Breakpoints – Sets default breakpoint sizes and includes a breakpoint shortcut mixin.
+* Colors – Sets 32 default named colors and includes a color picker mixin.
+* Layout – Reusable layout style mixins.
+* Grid – A mixin for setting grid layouts.
+* Z-Index – Default z-index values and a z-index shortcut mixin.
+* Typography – Sets 3 default named font families and includes a font picker mixin.
 
-### Theme Defaults - ./theme-defaults.scss
-* Contains default color, font, breakpoint and layout values.
-* This file contains fallback values and should not be edited directly when building a new theme.
-* Colors - `./_colors.scss`
-  * Adds a customized list of 24 basic colors, available as a SCSS map `$colors`
-  * Adds a `color()` shortcut function to get color values.
-* Typography - `./_typography.scss`
-  * Adds a basic font families, available as a SCSS map `$font-families`
-  * Adds a `font-family()` shortcut function to get font family values.
-  * Because fonts use spaces and require single quotes, the standard font-families list should be wrapped in a set of double quotes.
+### SCSS Theme Variables & Options
 
-### Theme Customizations - ./theme-options.scss
-* File layout and properties should look similar to `./theme-defaults.scss`
-* Overrides default theme values. Should be updated in each new theme to make common style values available to all bundles.
-  * Example: To overwrite the default value for the primary project color:
+The theme variables file stores common vaules used throughout the theme like primary colors, fonts, content width, spacing values, borders, etc.
 
-    ````scss
-    $color-primary: #FF00FF;
-    ````
-* Makes use of SCSS `map-merge()` to overwrite default maps with only the item keys and values that are being customized.
-  * Example: To add a new font-family to the `$font-families` map:
+The theme options file allows default values set in `scss/core` to be overwritten, and additional values to be added. Makes use of SCSS `map-merge()` to overwrite default maps with only the item keys and values that are being customized.
 
-    ````scss
-    $custom-font-families: (
-      script: "'Comic Sans MS', cursive",
-    );
-    $font-families: map-merge($font-families, $custom-font-families);
-    ````
-    _(Note the double quotes around the font-families map value.)_
+For example, to change a default color value, add the following in `_options.scss`:
+```scss
+$custom-colors: (
+  green: seagreen,
+);
+$colors: map-merge($colors, $custom-colors);
+```
 
-    Now it is possible to use the new value via the `font-family()` map shortcut function elsewhere in the theme.
+### Theme Modules
 
-    ````scss
-    $font-cartoon: 1em font-family(script);
-    ````
+Lean and reusable SCSS for styling component markup used throughout the site. For example, post grids or newsletter signup forms which use the same markup but are displayed in different entry points.
 
-  * Example: To override a default font-family in the `$font-families` map:
+Module files are imported before entry point styles so that they can be further customized for each entry point.
 
-    ````scss
-    $custom-font-families: (
-      sans-serif: "'Helvetica Neue', sans-serif",
-    );
-    $font-families: map-merge($font-families, $custom-font-families);
-    ````
-    _(Note the double quotes around the font-families map value.)_
+### Theme Entry Points
 
-    Now it is possible to use the override via the `font-family()` map shortcut function elsewhere in the theme.
+Each theme entrypoint has its own folder, and each folder contains an `index.scss` file which imports the theme core SCSS first, followed by any reusable theme modules, and then the files for styling that entry point.
 
-    ````scss
-    $font-swiss: 1em font-family(sans-serif);
-    ````
+For example, in `scss/home/index.scss`:
+```scss
+// Load Theme Core
+@import '../index';
+
+// Load Module Styles
+@import '../modules/grid';
+
+// Load Home Styles
+@import 'home';
+```
