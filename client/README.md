@@ -1,6 +1,6 @@
 # Roundhouse Theme Core
 
-This theme uses:
+This theme makes use of:
 * Webpack
 * SCSS
 * StyleLint
@@ -15,7 +15,7 @@ See: `./config/webpack.config.js`
 ## SCSS
 
 ### SCSS Theme Core
-The styles for this theme are written in SCSS and leveage SCSS mixins, functions and variables. A set of helper functions, theme mixins and reusable values has been included in the the `scss/core` directory. These files do not output any CSS themselves, but are intended to be imported into each entry point when complied.
+The styles for this theme are written in SCSS and leverage SCSS mixins, functions and variables. A set of helper functions, theme mixins and reusable values has been included in the the `scss/core` directory. These files do not output any CSS themselves, but are intended to be imported into each entry point when complied.
 
 Core files include:
 * Utilities - SCSS helper functions.
@@ -28,7 +28,7 @@ Core files include:
 
 ### SCSS Theme Variables & Options
 
-The theme variables file stores common vaules used throughout the theme like primary colors, fonts, content width, spacing values, borders, etc.
+The theme variables file stores common values used throughout the theme like primary colors, fonts, content width, spacing values, borders, etc.
 
 The theme options file allows default values set in `scss/core` to be overwritten, and additional values to be added. Makes use of SCSS `map-merge()` to overwrite default maps with only the item keys and values that are being customized.
 
@@ -44,11 +44,11 @@ $colors: map-merge($colors, $custom-colors);
 
 Lean and reusable SCSS for styling component markup used throughout the site. For example, post grids or newsletter signup forms which use the same markup but are displayed in different entry points.
 
-Module files are imported before entry point styles so that they can be further customized for each entry point.
+Module files are imported before entry point files so that they can be further customized for each view if necessary.
 
 ### Theme Entry Points
 
-Each theme entrypoint has its own folder, and each folder contains an `index.scss` file which imports the theme core SCSS first, followed by any reusable theme modules, and then the files for styling that entry point.
+Each theme entry point has its own folder, and each folder contains an `index.scss` file which imports the theme core SCSS first, followed by any reusable theme modules, and then the files for styling that entry point.
 
 For example, in `scss/home/index.scss`:
 ```scss
