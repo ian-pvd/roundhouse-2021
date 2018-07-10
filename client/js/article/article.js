@@ -1,4 +1,4 @@
 /* Article JS */
 
 // Article Styles
-import '../../scss/article/loader.scss';
+import '../../scss/article/index.scss';

@@ -1,0 +1,18 @@
+/* Article Styles
+ *
+ * Styles for single posts
+ */
+
+// Load Theme Core
+@import '../index';
+
+// Load Article Styles
+@import 'post-header';
+@import 'feature-image';
+@import 'image-effects';
+@import 'post-content';
+
+// Wrap Post Content Import
+.post-content {
+	@import 'wp-content';
+}

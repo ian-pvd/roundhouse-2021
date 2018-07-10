@@ -1,0 +1,22 @@
+/* Theme Grid System
+ *
+ * Default values for theme grid
+ */
+
+@mixin grid($cols: 4, $gutter: rem(20), $wrap: wrap) {
+	display: flex;
+	flex-wrap: $wrap;
+
+	> * {
+		flex: 0 1 calc( (100% / #{$cols}) - ( #{$gutter} * ( ( #{$cols} - 1 ) / #{$cols}) ) );
+		margin-right: #{$gutter};
+
+		&:nth-child(#{$cols}n) {
+			margin-right: 0;
+		}
+
+		&:nth-last-child(-n+#{$cols}n) {
+			margin-bottom: 0;
+		}
+	}
+}

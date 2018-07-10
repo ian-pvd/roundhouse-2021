@@ -1,0 +1,18 @@
+// Typography
+
+$font-families: (
+	sans-serif: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+	serif: "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman',  serif",
+	display: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+);
+
+// SCSS Fonts Map Shortcut Function
+@function font-family($key) {
+
+	@if map-has-key($font-families, $key) {
+		@return unquote(map-get($font-families, $key));
+	}
+
+	@warn 'Unknown `#{$key}` in $font-families.';
+	@return null;
+}

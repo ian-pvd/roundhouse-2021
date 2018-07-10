@@ -1,36 +1,47 @@
 /* Theme Values
  *
- * Default values for theme variables.
- * Override these options in `../theme/options.scss`
+ * Theme specific variables.
  */
 
-// Base unit in px
-// @see `../core/_variables.scss`
-$base-unit: 16;
+/* Base unit in px
+ * @see `../index.scss`
+ */
 
-// Default Colors
-// see `./_colors.scss`
+$base-unit: $base-unit;
 
-// Default Project Colors
-$color-primary: color(grey-dark);
+/* Default Project Colors
+ * see `../core/_colors.scss`
+ */
+
+$color-primary: color(green);
 $color-secondary: color(green-dark);
 $color-tertiary: color(red-dark);
 $color-highlight: color(red);
+$color-text: color(black);
+$color-background: color(white);
 
-// Default Font Families
-// see `./_typography.scss`
-
-// Default Project Fonts
-$font-body: 1rem/#{calc(4/3)} font-family(sans-serif);
-$font-header: 700 1.5rem/#{calc(5/3)} font-family(sans-serif);
-
-/* Theme Variable Overrides
- *
- * Custom values for theme variables.
- * Overrides defaults in `../core/_variables.scss`
+/* Default Project Fonts
+ * see `../core/_typography.scss`
  */
 
-// Theme Vars
+$font-body: 1rem/#{calc(5/3)} font-family(sans-serif);
+$font-header: 700 1.5rem/#{calc(4/3)} font-family(sans-serif);
+$font-branding: 700 2rem/1 font-family(display);
+
+/* Project Variables
+ * Custom theme values
+ */
+
+// Max site width
+$site-width: 80rem;
+
+// Max content width
+$content-width: 36rem;
+
+// Theme Layout Vars
 $height--site-header-content: rem(26);
 $height--site-header: spacer(3);
 $margin-bottom--site-header: spacer(1);
+
+// Reusable Border
+$border--dotted-light: 1px dotted fade-out(color(white), 0.75);
