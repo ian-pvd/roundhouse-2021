@@ -16,3 +16,11 @@ $font-families: (
 	@warn 'Unknown `#{$key}` in $font-families.';
 	@return null;
 }
+
+/* Typography Functions
+ */
+
+// PS style letter spacing based on 1000 value
+@function letter-spacing($spacing: 100) {
+	@return calc( #{$spacing} / 1000em );
+}

@@ -3,8 +3,7 @@
  * Helper mixins and functions for use throughout the theme
  */
 
-/* Functions
- *
+/* Utility Functions
  */
 
 // Return px value as rem.
@@ -20,13 +19,7 @@
 	@return ( $units * 1rem );
 }
 
-// PS style letter spacing based on 1000 value
-@function letter-spacing($spacing: 100) {
-	@return calc( #{$spacing} / 1000em );
-}
-
-/* Mixins
- *
+/* Utility Mixins
  */
 
 // Link hover effect
