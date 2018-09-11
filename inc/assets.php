@@ -28,6 +28,9 @@ function roundhouse_enqueue_assets() {
 		wp_enqueue_script( 'roundhouse-article-js', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'article-js' ), array( 'roundhouse-common-js' ), '1.0' );
 		wp_enqueue_style( 'roundhouse-article-css', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'article-css' ), array(), '1.0' );
 
+		wp_enqueue_script( 'roundhouse-result-js', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'result-js' ), array( 'roundhouse-common-js' ), '1.0' );
+		wp_enqueue_style( 'roundhouse-result-css', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'result-css' ), array(), '1.0' );
+
 		if ( is_admin() ) {
 			wp_enqueue_script( 'roundhouse-admin-js', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'admin-js' ), array( 'roundhouse-common-js' ), '1.0' );
 			wp_enqueue_style( 'roundhouse-admin-css', get_template_directory_uri() . '/static/' . roundhouse_get_versioned_asset( 'admin-css' ), array(), '1.0' );

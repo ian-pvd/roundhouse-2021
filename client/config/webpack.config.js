@@ -16,7 +16,7 @@ const appRoot = path.join(buildRoot, 'client/theme/js/app');
 const themename = path.join(__dirname, '../../').match(/([^\/]*)\/*$/)[1];
 
 // PostCSS
-const autoprefixer = require('autoprefixer');
+// const autoprefixer = require('autoprefixer');
 
 // Function Config
 const processEntry = require('./processEntry');
@@ -28,7 +28,7 @@ module.exports = function(env) {
   // Define postCSS plugin options
   const postCSSPlugins = function (webpack) {
     return [
-      autoprefixer(),
+      // autoprefixer(),
     ];
   };
 
@@ -36,11 +36,6 @@ module.exports = function(env) {
   const commonCSSRules = [
     {
       loader: 'css-loader',
-      options: {
-        minimize: {
-          autoprefixer: false,
-        },
-      },
     },
     {
       loader: 'postcss-loader',
@@ -66,6 +61,7 @@ module.exports = function(env) {
         article: ['client/js/article/article.js'],
         home: ['client/js/home/home.js'],
         page: ['client/js/page/page.js'],
+        result: ['client/js/result/result.js'],
       },
 
       // Environment Info & Single Entry Point
@@ -92,13 +88,13 @@ module.exports = function(env) {
     resolve: {
       modules: [
         buildRoot,
-        'node_modules'
-      ]
+        'node_modules',
+      ],
     },
 
     // Enable require('jquery') where jquery is already a global
     externals: {
-      'jquery': 'jQuery',
+      jquery: 'jQuery',
     },
 
     // Plugins array we configured above
@@ -138,8 +134,8 @@ module.exports = function(env) {
             'style-loader',
             'css-loader?modules&localIdentName=[name]__[local]__[hash:base64:5]&-autoprefixer',
             'postcss-loader',
-            'sass-loader'
-          ]
+            'sass-loader',
+          ],
         },
         {
           test: /\.png(\?v=\d+\.\d+\.\d+)?$/,

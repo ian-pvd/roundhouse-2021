@@ -1,0 +1,59 @@
+/* Breakpoint Mixin Examples
+ *
+ * SCSS example syntax for using the breakpoints mixin
+ */
+
+.responsive {
+  /* 0px and up */
+  /* Mobile Styles */
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 1025px) {
+  .responsive {
+    /* Named min-width value */
+    /* 1025px and up */
+    /* Ex: Desktop Styles */
+    max-width: 60rem;
+  }
+}
+
+@media all and (min-width: 641px) and (max-width: 1024px) {
+  .responsive {
+    /* Named min-width and max-width values: */
+    /* 641px - 1024px */
+    /* Ex: Tablet Only Styles */
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+@media all and (max-width: 2800px) {
+  .responsive {
+    /* Named max-width value only: */
+    /* Up to 2800px */
+    /* Ex: Desktop & Mobile only */
+    background-size: cover;
+  }
+}
+
+@media all and (min-width: 241px) and (max-width: 24rem) {
+  .responsive {
+    /* Custom width values: */
+    /* 241px - 24rem */
+    /* Ex: Arbitary Mobile Screen Sizes */
+    font-size: 1.125rem;
+  }
+}
+
+@media print {
+  .responsive {
+    /* Custom media type */
+    /* Print displays only */
+    /* Ex: Typography for Print */
+    font-size: 12pt;
+    line-height: 2;
+  }
+}
+
