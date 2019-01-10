@@ -22,7 +22,7 @@ The roundhouse theme ships with an assortment of common, pre-built options for y
 5. Site Content: Two Column Layout
 6. Site Content: Single Column Layout
 
-## Template Options
+### Template Options
 1. Post & Page: Advanced Featured Image Options
 
 ## Getting Set Up
