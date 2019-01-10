@@ -14,8 +14,7 @@ roundhouse is based on Automattic's [underscores](https://github.com/automattic/
 
 The roundhouse theme ships with an assortment of common, pre-built options for your theme's layouts, templates and metadata. Most of these are disabled by default. You can enable layout options by updating or adding matching CSS selector classes to your templates. Template options can be enabled by uncommenting include files in your `functions.php` file.
 
-###Layout Options
-
+### Layout Options
 1. Site Header: Sticky Header
 2. Main Navigation: Priority Nav
 3. Main Navigation: Top Level Nav
