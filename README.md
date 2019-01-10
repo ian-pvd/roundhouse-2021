@@ -38,7 +38,7 @@ The roundhouse theme ships with an assortment of common, pre-built options for y
     - Perform a case-sensative search for `PVD_` to replace all the constant names.
     - Search for <code>&nbsp;roundhouse</code> (with a space before it) to capture DocBlocks.
     - Search for `pvd-` to capture prefixed handles.
-3. Run `npm install` in your project directory.
+3. Run `npm install` & `npm run build` in your project directory.
 4. Assign some menus to the Primary Navigation and Footer Utilities menus.
 
 ## WordPress Theme Core
