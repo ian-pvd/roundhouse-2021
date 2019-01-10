@@ -13,23 +13,31 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'roundhouse' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'roundhouse' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'roundhouse' ), 'roundhouse', '<a href="https://pvdind.com/">PVD Industrial</a>' );
-			?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer">
+		<div class="site-footer__wrapper">
+			<nav id="footer-navigation" class="site-footer__navigation footer-navigation">
+				<?php
+				wp_nav_menu(
+					[
+						'container_class' => 'footer-navigation__utilities-menu utilities-menu',
+						'menu_class'     => 'utilities-menu__menu',
+						'menu_id'        => 'utilities-menu__menu',
+						'theme_location' => 'utilities-menu',
+					]
+				);
+				?>
+			</nav>
+			<div class="site-info copyright">
+				<span class="copyright__author">
+					<a href="<?php echo esc_html( get_bloginfo( 'url' ) ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
+				</span>
+				<span class="copyright__year"><?php echo esc_html( date( 'Y' ) ); ?></span>
+			</div><!-- .site-info -->
+		</div><!-- .site-footer__wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<?php get_template_part( 'template-parts/footer-includes' ); ?>
 
 </body>
 </html>

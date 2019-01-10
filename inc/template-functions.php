@@ -1,6 +1,6 @@
 <?php
 /**
- * Additional features to allow styling of the templates
+ * Functions which enhance the theme by hooking into WordPress
  *
  * @package roundhouse
  */
@@ -11,17 +11,27 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function roundhouse_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
+function pvd_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
 
+	// Adds a class of no-sidebar when there is no sidebar present.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
+	}
+
 	return $classes;
 }
-add_filter( 'body_class', 'roundhouse_body_classes' );
+add_filter( 'body_class', 'pvd_body_classes' );
+
+/**
+ * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+ */
+function pvd_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+	}
+}
+add_action( 'wp_head', 'pvd_pingback_header' );

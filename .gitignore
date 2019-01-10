@@ -1,6 +1,6 @@
-# Git Ignore File
+# Gitignore
 
-# Git Ignore Mac
+# Ignore Mac Files
 
 *.DS_Store
 .AppleDouble
