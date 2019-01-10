@@ -1,6 +1,6 @@
 <?php
 /**
- * PVD Roundhouse Feature Image
+ * roundhouse Feature Image
  *
  * Theme output tags
  *

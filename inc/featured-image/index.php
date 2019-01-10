@@ -1,22 +1,22 @@
 <?php
 /**
- * PVD Roundhouse Feature Image
+ * roundhouse Feature Image
  *
  * @package roundhouse
  */
 
 
 /**
- * Load PVD Roundhouse Feature Image Fieldmanager configuration
+ * Load roundhouse Feature Image Fieldmanager configuration
  */
 require get_template_directory() . '/inc/featured-image/fields.php';
 
 /**
- * Load PVD Roundhouse Feature Image handler functions
+ * Load roundhouse Feature Image handler functions
  */
 require get_template_directory() . '/inc/featured-image/functions.php';
 
 /**
- * Load PVD Roundhouse Feature Image theme output tags
+ * Load roundhouse Feature Image theme output tags
  */
 require get_template_directory() . '/inc/featured-image/tags.php';

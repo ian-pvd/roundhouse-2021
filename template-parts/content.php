@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package roundhouse
  */
@@ -10,36 +10,34 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<header class="post-header">
+	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="post-meta">
-			<?php roundhouse_posted_on(); ?>
-		</div><!-- .post-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .post-header -->
 
-	<?php
-	// check if the post has a Post Thumbnail assigned to it.
-	if ( has_post_thumbnail() ) {
-		?><div class="post-thumbnail"><?php
-		the_post_thumbnail();
-		?></div><?php
-	} ?>
+		if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php
+				pvd_posted_on();
+				pvd_posted_by();
+				?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</header><!-- .entry-header -->
 
-	<div class="post-content">
+	<?php pvd_post_thumbnail(); ?>
+
+	<div class="entry-content wp-content">
 		<?php
-			the_content( sprintf(
+		the_content(
+			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'roundhouse' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'pvd' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -47,16 +45,19 @@
 					)
 				),
 				get_the_title()
-			) );
+			)
+		);
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'roundhouse' ),
+		wp_link_pages(
+			[
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pvd' ),
 				'after'  => '</div>',
-			) );
+			]
+		);
 		?>
-	</div><!-- .post-content -->
+	</div><!-- .entry-content -->
 
-	<footer class="post-footer">
-		<?php roundhouse_entry_footer(); ?>
-	</footer><!-- .post-footer -->
+	<footer class="entry-footer">
+		<?php pvd_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

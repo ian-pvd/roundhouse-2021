@@ -7,45 +7,53 @@
  * @package roundhouse
  */
 
-get_header(); ?>
+get_header();
+?>
 
-	<main id="main" class="site-main" role="main">
-		<section id="primary" class="content-area">
-
-		<?php
-		if ( have_posts() ) : ?>
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
 
 			<header class="page-header">
-				<h1 class="page-title"><?php
+				<h1 class="page-title">
+					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'roundhouse' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
+					printf( esc_html__( 'Search Results for: %s', 'pvd' ), '<span>' . get_search_query() . '</span>' );
+					?>
+				</h1>
 			</header><!-- .page-header -->
 
+			<div class="post-list">
+
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			if ( have_posts() ) :
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			endwhile;
+					/**
+					 * Run the loop for the search to output the results.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-search.php and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'search' );
 
-			the_posts_navigation();
+				endwhile;
 
-		else :
+				the_posts_navigation();
 
-			get_template_part( 'template-parts/content', 'none' );
+			else :
 
-		endif; ?>
+				get_template_part( 'template-parts/content', 'none' );
 
-		</section><!-- #primary -->
-		<?php get_sidebar(); ?>
-	</main><!-- #main -->
+			endif;
+			?>
+
+			</div><!-- .post-area -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
 
 <?php
+get_sidebar();
 get_footer();
