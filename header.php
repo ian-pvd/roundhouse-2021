@@ -45,19 +45,24 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="site-header__navigation main-navigation main-navigation--priority-nav">
-				<button id="mobile-nav-toggle" class="main-navigation__menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pvd' ); ?></button>
-				<?php
-				wp_nav_menu(
-					[
-						'container_class' => 'main-navigation__primary-nav primary-nav',
-						'menu_class'      => 'primary-nav__menu',
-						'menu_id'         => 'primary-nav__menu',
-						'theme_location'  => 'primary-nav',
-					]
-				);
-				?>
-			</nav><!-- #site-navigation -->
+			<?php if ( has_nav_menu( 'primary-nav' ) ) : ?>
+
+				<nav id="site-navigation" class="site-header__navigation main-navigation main-navigation--priority-nav">
+					<button id="mobile-nav-toggle" class="main-navigation__menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pvd' ); ?></button>
+					<?php
+					wp_nav_menu(
+						[
+							'container_class' => 'main-navigation__primary-nav primary-nav',
+							'menu_class'      => 'primary-nav__menu',
+							'menu_id'         => 'primary-nav__menu',
+							'theme_location'  => 'primary-nav',
+						]
+					);
+					?>
+				</nav><!-- #site-navigation -->
+
+			<?php endif; ?>
+
 		</div>
 	</header><!-- #masthead -->
 

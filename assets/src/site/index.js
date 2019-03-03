@@ -3,7 +3,7 @@
  */
 
 // Global Scripts
-import toggleMobileNav from './js/toggleMobileNav';
+import toggleMenuDisplay from './js/toggleMenuDisplay';
 
 // Global Styles
 import './scss/index.scss';
@@ -15,5 +15,5 @@ if (module.hot) {
 
 // Enquue Site JS Modules
 document.addEventListener('DOMContentLoaded', () => {
-  toggleMobileNav();
+  toggleMenuDisplay('mobile-nav', 'page');
 });

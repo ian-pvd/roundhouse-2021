@@ -9,8 +9,9 @@
 		transform: translate3d(-$width--mobile-menu, 0, 0);
 		transition: transform 250ms;
 
-		@include breakpoints(small) {
+		@include breakpoints(medium) {
 			transform: none;
+			transition: none;
 		}
 	}
 }
@@ -21,7 +22,7 @@
 	overflow: hidden;
 	text-transform: uppercase;
 
-	@include breakpoints(small) {
+	@include breakpoints(medium) {
 		font-size: rem(20);
 	}
 }
@@ -30,17 +31,18 @@
 	@include reset-button;
 	@include hide-text;
 	background-color: $color--primary;
-	height: $height--site-header-content;
+	font-size: 2rem; // Affects mask-size scaling
+	height: $width--menu-toggle;
 	margin-left: auto;
 	mask: url(../img/icon-menu.svg) no-repeat center;
 	mask-size: cover;
-	width: $height--site-header-content;
+	width: $width--menu-toggle;
 
 	&[aria-expanded='true'] {
 		mask: url(../img/icon-close.svg) no-repeat center;
 	}
 
-	@include breakpoints(small) {
+	@include breakpoints(medium) {
 		display: none;
 	}
 }
@@ -52,7 +54,7 @@
 	transform: translateX($width--mobile-menu);
 	width: $width--mobile-menu;
 
-	@include breakpoints(small) {
+	@include breakpoints(medium) {
 		align-items: center;
 		display: flex;
 		height: 100%;
@@ -67,7 +69,7 @@
 		list-style: none;
 		margin: 0;
 
-		@include breakpoints(small) {
+		@include breakpoints(medium) {
 			align-items: flex-start;
 			display: flex;
 			flex-flow: row wrap;
@@ -78,7 +80,7 @@
 			border-bottom: 1px solid $color--text;
 			color: $color--text;
 
-			@include breakpoints(small) {
+			@include breakpoints(medium) {
 				align-items: center;
 				border-bottom: none;
 				display: flex;
@@ -101,7 +103,7 @@
 			padding: 1em;
 			text-decoration: none;
 
-			@include breakpoints(small) {
+			@include breakpoints(medium) {
 				@include link-hover;
 				padding: 0;
 			}
@@ -118,7 +120,7 @@
 
 /* Priority Nav Main Navigation Option */
 .main-navigation--priority-nav {
-	@include breakpoints(small) {
+	@include breakpoints(medium) {
 		align-items: center;
 
 		.primary-nav__menu {
