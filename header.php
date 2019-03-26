@@ -50,18 +50,47 @@
 				<nav id="site-navigation" class="site-header__navigation main-navigation main-navigation--priority-nav">
 					<button id="mobile-nav-toggle" class="main-navigation__menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pvd' ); ?></button>
 					<?php
+					// Add search bar to nav before menu.
+					$menu_prefix_markup = get_search_form( false );
+
+					// Check for social links to add to nav after menu.
+					$menu_suffix_markup = ( has_nav_menu( 'social-links' ) ) ? pvd_social_links( false ) : null;
+
+					// Display Primary Nav Menu.
 					wp_nav_menu(
 						[
 							'container_class' => 'main-navigation__primary-nav primary-nav',
 							'menu_class'      => 'primary-nav__menu',
 							'menu_id'         => 'primary-nav__menu',
 							'theme_location'  => 'primary-nav',
+							'items_wrap'      => $menu_prefix_markup . '<ul id="%1$s" class="%2$s">%3$s</ul>' . $menu_suffix_markup,
 						]
 					);
 					?>
 				</nav><!-- #site-navigation -->
 
 			<?php endif; ?>
+
+			<?php
+				/**
+				 * TODO: Create a `site-header--has-utilities` option
+				 *  - Display the side header at 2x height.
+				 *  - Create a second row for description & utilities.
+				 *  - Unhide this markup on desktop.
+				 */
+			?>
+			<div class="site-header__utilities">
+
+				<?php if ( has_nav_menu( 'social-links' ) ) : ?>
+				<div class="site-header__social-links">
+					<?php pvd_social_links(); ?>
+				</div>
+				<?php endif; ?>
+
+				<div class="site-header__search-form">
+				<?php get_search_form(); ?>
+				</div>
+			</div><!-- .site-header__utilities -->
 
 		</div>
 	</header><!-- #masthead -->

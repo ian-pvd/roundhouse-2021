@@ -15,7 +15,9 @@ $color--secondary: color(red-dark);
 $color--tertiary: color(blue-light);
 $color--highlight: color(green-dark);
 $color--text: color(black);
+$color--text-alt: color(white);
 $color--background: color(white);
+$color--interface: color(grey-light);
 
 /* Default Project Fonts */
 /* see `./_typography.scss` */
@@ -40,4 +42,6 @@ $width--mobile-menu: rem(256);
 $width--menu-toggle: rem(24);
 
 // Reusable Borders
-$border--solid: 1px solid $color--secondary;
+$border--hr: 1px solid $color--text;
+$border--page: 2px solid color(grey-very-light);
+$border--solid: 1px solid $color--interface;
