@@ -4,6 +4,7 @@
 
 // Global Scripts
 import toggleMenuDisplay from './js/toggleMenuDisplay';
+import loadWebFonts from './js/webFontLoader';
 
 // Global Styles
 import './scss/index.scss';
@@ -16,4 +17,5 @@ if (module.hot) {
 // Enquue Site JS Modules
 document.addEventListener('DOMContentLoaded', () => {
   toggleMenuDisplay('mobile-nav', 'page');
+  loadWebFonts();
 });
