@@ -4,7 +4,7 @@
 
 // Global Scripts
 import toggleMenuDisplay from './js/toggleMenuDisplay';
-import loadWebFonts from './js/webFontLoader';
+import loadWebFonts from './js/loadWebFonts';
 
 // Global Styles
 import './scss/index.scss';
