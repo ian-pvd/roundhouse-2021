@@ -125,15 +125,6 @@
 
 .site-header__utilities {
 	display: none;
-	// TODO: Create a `site-header--has-utilities` option.
-	// @include breakpoints(medium) {
-	// 	align-items: flex-end;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	margin-left: auto;
-	// 	position: absolute;
-	// 	right: spacer(1);
-	// }
 }
 
 .site-header__social-links {

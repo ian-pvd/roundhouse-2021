@@ -71,14 +71,6 @@
 
 			<?php endif; ?>
 
-			<?php
-				/**
-				 * TODO: Create a `site-header--has-utilities` option
-				 *  - Display the side header at 2x height.
-				 *  - Create a second row for description & utilities.
-				 *  - Unhide this markup on desktop.
-				 */
-			?>
 			<div class="site-header__utilities">
 
 				<?php if ( has_nav_menu( 'social-links' ) ) : ?>
