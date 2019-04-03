@@ -187,11 +187,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * roundhouse: Disable & Customize Comments
+ * Roundhouse: Load Social Links Module
+ */
+require_once PVD_PATH . '/inc/social-links/index.php';
+
+/**
+ * Roundhouse: Disable & Customize Comments
  */
 require_once PVD_PATH . '/inc/comments/index.php';
 
 /**
- * roundhouse: Load Custom Featured Image Options
+ * Roundhouse: Load Custom Featured Image Options
  */
 // require_once PVD_PATH . '/inc/featured-image/index.php';
