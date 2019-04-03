@@ -27,20 +27,17 @@
 	<header id="masthead" class="site-header site-header--sticky">
 		<div class="site-header__wrapper">
 			<div class="site-header__branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
+				<?php the_custom_logo(); ?>
+
+				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
+				<?php else : ?>
 					<p class="site-header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$pvd_description = get_bloginfo( 'description', 'display' );
-				if ( $pvd_description || is_customize_preview() ) :
-					?>
+				<?php endif; ?>
+
+				<?php $pvd_description = get_bloginfo( 'description', 'display' ); ?>
+
+				<?php if ( $pvd_description || is_customize_preview() ) : ?>
 					<p class="site-header__description"><?php echo $pvd_description; /* WPCS: xss ok. */ ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
