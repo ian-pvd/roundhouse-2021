@@ -5,12 +5,15 @@
  * @package roundhouse
  */
 
+// The default sidebar.
 $sidebar = 'sidebar-single';
 
+// Conditionals to use a different sidebar.
 if ( is_page() || is_404() ) {
 	$sidebar = 'sidebar-page';
 }
 
+// If the sidebar isn't active, bail.
 if ( ! is_active_sidebar( $sidebar ) ) {
 	return;
 }

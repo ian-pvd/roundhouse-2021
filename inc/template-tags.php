@@ -15,18 +15,21 @@ if ( ! function_exists( 'pvd_posted_on' ) ) :
 		echo '<div class="entry-date">';
 
 		$time_string = '<time class="entry-date__published entry-date__updated" datetime="%1$s">%2$s</time>';
+		$updated_string = null;
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date__published" datetime="%1$s">%2$s</time>';
 			$updated_string = '<time class="entry-date__updated" datetime="%1$s">%2$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$time_string = sprintf(
+			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
 		);
 
 		if ( $updated_string ) {
-			$updated_string = sprintf( $updated_string,
+			$updated_string = sprintf(
+				$updated_string,
 				esc_attr( get_the_modified_date( DATE_W3C ) ),
 				esc_html( get_the_modified_date() )
 			);

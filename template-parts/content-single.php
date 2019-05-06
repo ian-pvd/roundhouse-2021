@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts in a list.
+ * Template part for displaying single post content.
  *
  * @package roundhouse
  */
@@ -30,8 +30,17 @@
 
 	<?php pvd_post_thumbnail(); ?>
 
-	<div class="entry-content entry-content--excerpt">
-		<?php the_excerpt(); ?>
+	<div class="entry-content">
+		<?php
+		the_content();
+
+		wp_link_pages(
+			[
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pvd' ),
+				'after'  => '</div>',
+			]
+		);
+		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
