@@ -179,6 +179,11 @@ require_once PVD_PATH . '/inc/social-links/index.php';
 require_once PVD_PATH . '/inc/comments/index.php';
 
 /**
+ * Roundhouse: Load Custom Excerpts
+ */
+require_once PVD_PATH . '/inc/excerpts/index.php';
+
+/**
  * Roundhouse: Widgets Module
  */
 require_once PVD_PATH . '/inc/widgets/index.php';
