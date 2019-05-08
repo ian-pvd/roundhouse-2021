@@ -140,7 +140,7 @@ if ( ! function_exists( 'pvd_post_thumbnail' ) ) :
 				</div>
 
 				<?php if ( get_the_post_thumbnail_caption() ) : ?>
-				<figcaption>
+				<figcaption class="post-thumbnail__caption">
 					<?php
 						echo wp_kses(
 							get_the_post_thumbnail_caption(),
