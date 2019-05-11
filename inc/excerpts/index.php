@@ -11,8 +11,18 @@
  * @return string List of tags.
  */
 function pvd_custom_excerpt_allowed_tags() {
-	// Add custom tags to this string.
-	return '<p><a><b><i><strong><em>';
+	// Add tags to allow in custom excerpts to this array.
+	$allowed_html = [
+		'p'      => [],
+		'a'      => [
+			'href' => [],
+		],
+		'b'      => [],
+		'i'      => [],
+		'strong' => [],
+		'em'     => [],
+	];
+	return $allowed_html;
 }
 
 if ( ! function_exists( 'pvd_custom_excerpt' ) ) :
@@ -33,7 +43,7 @@ if ( ! function_exists( 'pvd_custom_excerpt' ) ) :
 			$custom_excerpt = strip_shortcodes( $custom_excerpt );
 			$custom_excerpt = apply_filters( 'the_content', $custom_excerpt );
 			$custom_excerpt = str_replace( ']]>', ']]&gt;', $custom_excerpt );
-			$custom_excerpt = strip_tags(
+			$custom_excerpt = wp_kses(
 				$custom_excerpt,
 				pvd_custom_excerpt_allowed_tags()
 			);
