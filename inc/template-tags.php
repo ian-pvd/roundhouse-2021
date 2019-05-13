@@ -136,7 +136,7 @@ if ( ! function_exists( 'pvd_post_thumbnail' ) ) :
 
 			<figure class="post-thumbnail">
 				<div class="post-thumbnail__frame">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail( $size ); ?>
 				</div>
 
 				<?php if ( get_the_post_thumbnail_caption() ) : ?>

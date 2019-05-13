@@ -11,12 +11,18 @@ $breakpoints: map-merge($breakpoints, $custom-breakpoints);
 
 /* Custom Colors */
 /* @see `./_colors.scss` */
-$custom-colors: ();
+$custom-colors: (
+	green-pvd: hsl(120deg, 25%, 33.333%),
+);
 $colors: map-merge($colors, $custom-colors);
 
 /* Custom Font Families */
 /* @see `./_typography.scss` */
-$custom-font-families: ();
+$custom-font-families: (
+	sans-serif: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
+	logotype: 'Oswald, HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif',
+	headers: 'HelveticaNeue-CondensedBold, "Arial Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif',
+);
 $font-families: map-merge($font-families, $custom-font-families);
 
 /* Custom Z-Index */
