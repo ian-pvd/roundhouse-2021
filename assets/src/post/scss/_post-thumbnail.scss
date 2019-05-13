@@ -5,10 +5,25 @@
 .post-thumbnail {
 	margin-bottom: spacer(1);
 	display: block;
+}
 
-	figcaption {
-		font-size: rem(12);
-		font-style: italic;
-		margin-top: spacer(1);
+.post-thumbnail__frame,
+.post-thumbnail__link {
+	> img {
+		@include absolute-pinned();
+		@include image-fill();
 	}
+}
+
+.post-thumbnail__frame {
+	@include aspect-ratio();
+}
+
+.post-thumbnail__link {
+	@include aspect-ratio(16, 9);
+	display: block;
+}
+
+.post-thumbnail__caption {
+	@include figure-caption();
 }

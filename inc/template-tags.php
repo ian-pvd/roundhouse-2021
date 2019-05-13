@@ -15,18 +15,21 @@ if ( ! function_exists( 'pvd_posted_on' ) ) :
 		echo '<div class="entry-date">';
 
 		$time_string = '<time class="entry-date__published entry-date__updated" datetime="%1$s">%2$s</time>';
+		$updated_string = null;
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date__published" datetime="%1$s">%2$s</time>';
 			$updated_string = '<time class="entry-date__updated" datetime="%1$s">%2$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$time_string = sprintf(
+			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
 		);
 
 		if ( $updated_string ) {
-			$updated_string = sprintf( $updated_string,
+			$updated_string = sprintf(
+				$updated_string,
 				esc_attr( get_the_modified_date( DATE_W3C ) ),
 				esc_html( get_the_modified_date() )
 			);
@@ -118,10 +121,12 @@ if ( ! function_exists( 'pvd_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 *
-	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * Wraps the post thumbnail in an anchor element on list views, or a div
 	 * element when on single views.
+	 *
+	 * @param  string $size The image size to use.
 	 */
-	function pvd_post_thumbnail() {
+	function pvd_post_thumbnail( $size = 'post-thumbnail' ) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -130,26 +135,52 @@ if ( ! function_exists( 'pvd_post_thumbnail' ) ) :
 			?>
 
 			<figure class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<div class="post-thumbnail__frame">
+					<?php the_post_thumbnail(); ?>
+				</div>
 
 				<?php if ( get_the_post_thumbnail_caption() ) : ?>
-				<figcaption><?php echo esc_html( get_the_post_thumbnail_caption() ); ?></figcaption>
+				<figcaption class="post-thumbnail__caption">
+					<?php
+						echo wp_kses(
+							get_the_post_thumbnail_caption(),
+							[
+								'a'      => [
+									'href'   => [],
+									'rel'    => [],
+									'target' => [],
+								],
+								'b'      => [],
+								'strong' => [],
+								'i'      => [],
+								'em'     => [],
+							]
+						);
+					?>
+				</figcaption>
 				<?php endif; ?>
 			</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
-		</a>
+			<div class="post-thumbnail">
+				<a class="post-thumbnail__link" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+					<?php
+					the_post_thumbnail(
+						$size,
+						[
+							'alt' => the_title_attribute(
+								[
+									'echo' => false,
+								]
+							),
+						]
+					);
+					?>
+				</a>
+			</div>
 
-		<?php
+			<?php
 		endif; // End is_singular().
 	}
 endif;

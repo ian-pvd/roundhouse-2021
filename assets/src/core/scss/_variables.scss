@@ -31,6 +31,9 @@ $font--mono: 0.75rem/1rem font-family(mono);
 // Max content width
 $width--content: 44rem;
 
+// Max sidebar width
+$width--sidebar: rem(320);
+
 // Max site width
 $width--site: 72rem;
 
@@ -42,6 +45,7 @@ $width--mobile-menu: rem(256);
 $width--menu-toggle: rem(24);
 
 // Reusable Borders
+$border--light: 1px solid color(grey-light);
 $border--hr: 1px solid $color--text;
 $border--page: 2px solid color(grey-very-light);
 $border--solid: 1px solid $color--interface;

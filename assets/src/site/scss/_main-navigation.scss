@@ -115,7 +115,7 @@
 		max-width: none;
 		height: rem(48);
 
-		@include breakpoints(large) {
+		@include breakpoints(medium) {
 			display: none;
 		}
 
@@ -141,7 +141,7 @@
 	}
 
 	.social-links {
-		@include breakpoints(large) {
+		@include breakpoints(medium) {
 			display: none;
 		}
 

@@ -120,24 +120,6 @@ function pvd_content_width() {
 add_action( 'after_setup_theme', 'pvd_content_width', 0 );
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function pvd_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'pvd' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'pvd' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'pvd_widgets_init' );
-
-/**
  * Enqueue WP scripts.
  */
 function pvd_scripts() {
@@ -195,6 +177,16 @@ require_once PVD_PATH . '/inc/social-links/index.php';
  * Roundhouse: Disable & Customize Comments
  */
 require_once PVD_PATH . '/inc/comments/index.php';
+
+/**
+ * Roundhouse: Load Custom Excerpts
+ */
+require_once PVD_PATH . '/inc/excerpts/index.php';
+
+/**
+ * Roundhouse: Widgets Module
+ */
+require_once PVD_PATH . '/inc/widgets/index.php';
 
 /**
  * Roundhouse: Load Custom Featured Image Options
