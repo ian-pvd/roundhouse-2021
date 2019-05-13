@@ -20,25 +20,34 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
-
+<div id="comments" class="comments comments-area">
 	<?php
-	// You can start editing here -- including this comment!
+	// Comments Form.
+	comment_form(
+		[
+			'title_reply'          => __( 'Comments', 'roundhouse' ),
+			'title_reply_before'   => '<h3 id="reply-title" class="comments-respond__title">',
+			'comment_notes_before' => '',
+			'comment_field'        => '<p class="comment-form__comment"><textarea id="comment" name="comment" cols="45" rows="4" aria-required="true"></textarea></p>',
+		]
+	);
+
+	// If there are comments, display the comments list.
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments__title">
 			<?php
 			$pvd_comment_count = get_comments_number();
 			if ( '1' === $pvd_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'pvd' ),
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'pvd' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $pvd_comment_count, 'comments title', 'pvd' ) ),
+					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $pvd_comment_count, 'comments title', 'pvd' ) ),
 					number_format_i18n( $pvd_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -48,22 +57,24 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
+		<ol class="comments__list">
 			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
+			wp_list_comments(
+				[
+					'style'       => 'ol',
+					'avatar_size' => 64,
+				]
+			);
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php
 		the_comments_navigation();
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
+		// If comments are closed and there are comments...
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'pvd' ); ?></p>
+			<p class="comments__none"><?php esc_html_e( 'Comments are closed.', 'pvd' ); ?></p>
 			<?php
 		endif;
 
