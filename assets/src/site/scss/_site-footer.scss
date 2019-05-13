@@ -21,7 +21,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style: none;
-	margin: 0 0 spacer(1);
+	margin: 0 0 spacer(0.5);
 	text-align: center;
 
 	@include breakpoints(none, small) {
