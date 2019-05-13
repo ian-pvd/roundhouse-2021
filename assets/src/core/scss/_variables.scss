@@ -10,10 +10,10 @@ $base-unit: $base-unit;
 
 /* Default Project Colors */
 /* see `./_colors.scss` */
-$color--primary: color(green);
+$color--primary: color(green-pvd);
 $color--secondary: color(red-dark);
-$color--tertiary: color(blue-light);
-$color--highlight: color(green-dark);
+$color--tertiary: color(green-dark);
+$color--highlight: color(green);
 $color--text: color(black);
 $color--text-alt: color(white);
 $color--background: color(white);
