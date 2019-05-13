@@ -19,7 +19,7 @@
 			if ( has_nav_menu( 'utilities' ) ) :
 				wp_nav_menu(
 					[
-						'container_class' => 'footer-navigation__utilities-menu footer-utilities',
+						'container_class' => 'site-footer__utilities-menu footer-utilities',
 						'menu_class'      => 'footer-utilities__menu',
 						'menu_id'         => 'footer-utilities__menu',
 						'theme_location'  => 'utilities',

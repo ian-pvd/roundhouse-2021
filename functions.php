@@ -49,7 +49,7 @@ if ( ! function_exists( 'pvd_setup' ) ) :
 		register_nav_menus(
 			[
 				'primary-nav' => esc_html__( 'Primary Navigation', 'pvd' ),
-				'utilities-menu'  => esc_html__( 'Utilities Menu', 'pvd' ),
+				'utilities'   => esc_html__( 'Footer Utilities', 'pvd' ),
 			]
 		);
 
