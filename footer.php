@@ -37,9 +37,12 @@
 				</span>
 			</div><!-- .site-info.copyright -->
 			<div class="site-info site-info__terms-privacy terms-privacy">
-				<?php /* Add terms link with pvd_get_page. */ ?>
+				<?php if ( pvd_get_page( 'terms' ) ) : ?>
+				<span class="site-info__terms"><a href="<?php echo esc_url( pvd_get_page( 'terms' ) ); ?>"><?php esc_html_e( 'Terms of Use', 'roundhouse' ); ?></a></span>
+				<?php endif; ?>
+
 				<?php if ( get_privacy_policy_url() ) : ?>
-				<span class="site-info__privacy"><a href="<?php echo esc_url( get_privacy_policy_url() ); ?>"><?php esc_html_e( 'Privacy Policy', 'gothamish' ); ?></a></span>
+				<span class="site-info__privacy"><a href="<?php echo esc_url( get_privacy_policy_url() ); ?>"><?php esc_html_e( 'Privacy Policy', 'roundhouse' ); ?></a></span>
 				<?php endif; ?>
 			</div><!-- .site-info.terms-privacy -->
 

@@ -147,6 +147,11 @@ require_once PVD_PATH . '/inc/assets.php';
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Roundhouse: Theme Settings.
+ */
+require_once PVD_PATH . '/inc/theme-settings.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
