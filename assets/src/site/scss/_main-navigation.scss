@@ -17,13 +17,14 @@
 }
 
 .main-navigation {
-	font: 500 1rem/1 font-family(display);
+	font: 500 1rem/#{calc(4/3)} font-family(display);
 	min-width: $height--site-header-content;
 	overflow: hidden;
 	text-transform: uppercase;
 
 	@include breakpoints(medium) {
 		font-size: rem(20);
+		line-height: 1;
 	}
 }
 
@@ -106,6 +107,16 @@
 			@include breakpoints(medium) {
 				@include link-hover;
 				padding: 0;
+			}
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+
+			li {
+				border-top: 1px solid color(grey-tint);
+				padding-left: spacer(1);
 			}
 		}
 	}

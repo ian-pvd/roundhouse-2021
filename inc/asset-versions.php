@@ -12,10 +12,10 @@
  */
 function pvd_get_asset_version( $asset ) {
 	$assets = array(
-		'post-css' => 'post.b21490.css',
-		'post-js' => 'post.b21490.js',
-		'site-css' => 'site.b21490.css',
-		'site-js' => 'site.b21490.js',
+		'post-css' => 'post.css',
+		'post-js' => 'post.js',
+		'site-css' => 'site.css',
+		'site-js' => 'site.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }
