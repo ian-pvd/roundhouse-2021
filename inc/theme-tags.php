@@ -184,3 +184,18 @@ if ( ! function_exists( 'pvd_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'pvd_logotype' ) ) :
+	/**
+	 * Returns a filtered string containing the site name to be styled.
+	 *
+	 * @return string Formatted site title.
+	 */
+	function pvd_logotype() {
+		// Get blog name.
+		$logotype = get_bloginfo( 'name' );
+
+		// Return logotype string.
+		return '<span class="site-logotype">' . $logotype . '</span>';
+	}
+endif;

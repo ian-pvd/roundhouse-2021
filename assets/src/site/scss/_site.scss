@@ -45,6 +45,16 @@ body,
 }
 /* stylelint-enable */
 
+/* Special site-wide selectors */
+.site-logotype {
+	font-family: font-family(logotype);
+	line-height: 1;
+
+	span {
+		font-weight: 700;
+	}
+}
+
 /* Common Element Defaults */
 
 // Headings
