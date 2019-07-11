@@ -57,7 +57,6 @@
 	a {
 		@include link-hover;
 		color: $color--text;
-		font-weight: 700;
 
 		&:hover {
 			color: $color--highlight;
@@ -74,12 +73,7 @@
 	}
 
 	.copyright__author {
-		font-family: font-family(logotype);
-	}
-
-	.copyright__notice {
-		font-size: rem(12);
-		display: block;
+		// font-family: font-family(logotype);
 	}
 
 	.site-info__terms + .site-info__privacy {

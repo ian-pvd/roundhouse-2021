@@ -37,8 +37,8 @@
 				</span>
 			</div><!-- .site-info.copyright -->
 			<div class="site-info site-info__terms-privacy terms-privacy">
-				<?php if ( pvd_get_page( 'terms' ) ) : ?>
-				<span class="site-info__terms"><a href="<?php echo esc_url( pvd_get_page( 'terms' ) ); ?>"><?php esc_html_e( 'Terms of Use', 'roundhouse' ); ?></a></span>
+				<?php if ( pvd_get_page( 'sample-page-2' ) ) : ?>
+				<span class="site-info__terms"><a href="<?php echo esc_url( pvd_get_page( 'sample-page-2' ) ); ?>"><?php esc_html_e( 'Terms of Use', 'roundhouse' ); ?></a></span>
 				<?php endif; ?>
 
 				<?php if ( get_privacy_policy_url() ) : ?>
