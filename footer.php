@@ -33,7 +33,7 @@
 					<a href="<?php echo esc_html( home_url() ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
 				</span>
 				<span class="copyright__notice">
-					<?php esc_html_e( 'Copyright notice.', 'roundhouse' ); ?>
+					<?php esc_html_e( 'All rights reserved.', 'roundhouse' ); ?>
 				</span>
 			</div><!-- .site-info.copyright -->
 			<div class="site-info site-info__terms-privacy terms-privacy">

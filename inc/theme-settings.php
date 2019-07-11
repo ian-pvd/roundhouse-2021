@@ -1,13 +1,41 @@
 <?php
 /**
- * Roundhouse theme settings not displayed in the WP Admin.
+ * Roundhouse customizable theme settings not displayed in the WP Admin.
  *
  * @package Roundhouse
  */
 
-// if ( ! function_exists( 'pvd_get_option' ) ) :
-	//this
-// endif;
+if ( ! function_exists( 'pvd_get_option' ) ) :
+	/**
+	 * Returns a theme value for the requested setting.
+	 *
+	 * @param  string  $setting  Name of setting to be returned.
+	 * @param  boolean $default Default value to return if setting not found.
+	 * @return mixed           Value for the setting.
+	 */
+	function pvd_get_setting( $setting, $default = false ) {
+
+		$setting = trim( $setting );
+		if ( empty( $setting ) ) {
+			return false;
+		}
+
+		// Start with theme value set to default.
+		$value = $default;
+
+		// An array of hardcoded theme settings.
+		$theme_settings = [
+			// Toggle display advertisments.
+			'display-ads' => true,
+		];
+
+		if ( ! empty( $theme_settings[ $setting ] ) ) {
+			$value = $theme_settings[ $setting ];
+		}
+
+		return $value;
+	}
+endif;
 
 if ( ! function_exists( 'pvd_get_page' ) ) :
 	/**
