@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	background: $color--background;
+	background: $color--background-nav;
 	color: $color--text;
 	font: $font--body;
 }
@@ -28,6 +28,7 @@ body,
 
 /* Slide Out Mobile Nav */
 .site {
+	background: $color--background;
 	display: flex;
 	flex-direction: column;
 }
