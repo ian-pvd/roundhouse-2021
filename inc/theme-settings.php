@@ -17,7 +17,7 @@ if ( ! function_exists( 'pvd_get_option' ) ) :
 
 		$setting = trim( $setting );
 		if ( empty( $setting ) ) {
-			return false;
+			return null;
 		}
 
 		// Start with theme value set to default.
