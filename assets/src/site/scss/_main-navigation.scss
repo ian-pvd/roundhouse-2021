@@ -17,13 +17,14 @@
 }
 
 .main-navigation {
-	font: 500 1rem/1 font-family(display);
+	font: 500 1rem/#{calc(4/3)} font-family(display);
 	min-width: $height--site-header-content;
 	overflow: hidden;
 	text-transform: uppercase;
 
 	@include breakpoints(medium) {
 		font-size: rem(20);
+		line-height: 1;
 	}
 }
 
@@ -108,12 +109,22 @@
 				padding: 0;
 			}
 		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+
+			li {
+				border-top: 1px solid color(black--50);
+				padding-left: spacer(1);
+			}
+		}
 	}
 
 	.search-form {
 		width: 100%;
 		max-width: none;
-		height: rem(48);
+		height: calc( #{spacer(3.5)} + 1px);
 
 		@include breakpoints(medium) {
 			display: none;
@@ -135,7 +146,7 @@
 			background-size: rem(20) rem(20);
 			height: rem(40);
 			right: rem(4);
-			top: rem(4);
+			top: rem(8);
 			width: rem(40);
 		}
 	}
@@ -154,7 +165,6 @@
 		a {
 			max-width: 100%;
 			height: rem(64);
-			// color: $color--text-alt; is it safe to remove this?
 			padding: 0;
 		}
 	}

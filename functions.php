@@ -49,7 +49,7 @@ if ( ! function_exists( 'pvd_setup' ) ) :
 		register_nav_menus(
 			[
 				'primary-nav' => esc_html__( 'Primary Navigation', 'pvd' ),
-				'utilities-menu'  => esc_html__( 'Utilities Menu', 'pvd' ),
+				'utilities'   => esc_html__( 'Footer Utilities', 'pvd' ),
 			]
 		);
 
@@ -145,6 +145,11 @@ require_once PVD_PATH . '/inc/assets.php';
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Roundhouse: Theme Settings.
+ */
+require_once PVD_PATH . '/inc/theme-settings.php';
 
 /**
  * Custom template tags for this theme.

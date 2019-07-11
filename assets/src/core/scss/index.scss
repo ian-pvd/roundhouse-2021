@@ -15,8 +15,6 @@ $base-unit: 16;
 @import 'typography';
 @import 'animations';
 
-// Import Theme Options
+// Import Theme Options & Variables
 @import 'options';
-
-// Import Theme Variables
 @import 'variables';
