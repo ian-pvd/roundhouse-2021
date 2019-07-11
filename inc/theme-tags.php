@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme
  *
- * Eventually, some of the functionality here could be replaced by core features.
+ * These template functions are taksed with displaing custom theme markup.
  *
  * @package roundhouse
  */
