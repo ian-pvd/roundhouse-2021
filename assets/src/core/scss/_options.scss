@@ -13,7 +13,7 @@ $breakpoints: map-merge($breakpoints, $custom-breakpoints);
 /* @see `./_colors.scss` */
 $custom-colors: (
 	green-pvd: hsl(120deg, 25%, 33.333%),
-	grey-tint: hsla(0deg, 0%, 0%, 0.5),
+	black--50: hsla(0deg, 0%, 0%, 0.5),
 );
 $colors: map-merge($colors, $custom-colors);
 

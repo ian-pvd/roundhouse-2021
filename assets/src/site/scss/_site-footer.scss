@@ -72,10 +72,6 @@
 		font-variant-numeric: tabular-nums;
 	}
 
-	.copyright__author {
-		// font-family: font-family(logotype);
-	}
-
 	.site-info__terms + .site-info__privacy {
 		&::before {
 			content: '\0026\2009';

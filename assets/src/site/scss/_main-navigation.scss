@@ -115,7 +115,7 @@
 			margin: 0;
 
 			li {
-				border-top: 1px solid color(grey-tint);
+				border-top: 1px solid color(black--50);
 				padding-left: spacer(1);
 			}
 		}
@@ -124,7 +124,7 @@
 	.search-form {
 		width: 100%;
 		max-width: none;
-		height: rem(57); // @TODO: Magic Number
+		height: calc( #{spacer(3.5)} + 1px);
 
 		@include breakpoints(medium) {
 			display: none;
@@ -165,7 +165,6 @@
 		a {
 			max-width: 100%;
 			height: rem(64);
-			// color: $color--text-alt; is it safe to remove this?
 			padding: 0;
 		}
 	}
