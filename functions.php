@@ -202,6 +202,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require_once PVD_PATH . '/inc/social-links/index.php';
 
 /**
+ * Gothamish: Load Ads Module
+ */
+require_once PVD_PATH . '/inc/ads/index.php';
+
+/**
  * Roundhouse: Disable & Customize Comments
  */
 require_once PVD_PATH . '/inc/comments/index.php';
