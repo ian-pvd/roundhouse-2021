@@ -13,7 +13,6 @@ $image_size = 'pvd_tout';
 	<a class="post__link-wrapper" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<header class="post__header">
 			<?php the_title( sprintf( '<h3 class="post__title">', '</h3>' ) ); ?>
-			<?php /* @TODO: Include Post Meta */ ?>
 		</header><!-- .post__header -->
 
 		<div class="post__thumbnail-frame">
