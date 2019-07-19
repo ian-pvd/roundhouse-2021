@@ -5,6 +5,9 @@
 // Load Theme Core
 @import '../../core/scss/index.scss';
 
+// Import Module Styles
+@import '../../modules/post-lists/_touts.scss';
+
 // Import Post Styles
 // @import 'post';
 @import 'post-header';

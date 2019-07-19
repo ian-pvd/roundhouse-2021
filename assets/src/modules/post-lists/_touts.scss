@@ -1,0 +1,46 @@
+/**
+ * Tout Post List
+ *
+ * Featured image overlayed with the post title.
+ */
+
+.post--tout {
+	background: color(grey-very-dark);
+
+	&.has-post-thumbnail {
+		height: 0;
+		overflow: hidden;
+		padding-top: calc((2/3) * 100%);
+		position: relative;
+
+		img {
+			@include absolute-pinned();
+			@include image-fill();
+		}
+
+		.post__title {
+			background: linear-gradient( transparent, rgba(0,0,0,0.5), rgba(0,0,0,0.75) );
+			bottom: 0;
+			position: absolute;
+			z-index: z-index(first);
+		}
+	}
+
+	&:not(.has-post-thumbnail) {
+		.post__thumbnail-frame {
+			display: none;
+		}
+	}
+
+	.post__link-wrapper {
+		display: block;
+		text-decoration: none;
+	}
+
+	.post__title {
+		color: $color--text-alt;
+		font-size: rem(20);
+		padding: spacer(0.5) spacer(1);
+		width: 100%;
+	}
+}

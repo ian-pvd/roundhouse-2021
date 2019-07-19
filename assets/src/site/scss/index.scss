@@ -11,7 +11,11 @@
 @import 'reset';
 
 // Import Modules
+@import '../../modules/ads/index.scss';
 @import '../../modules/social-links/index.scss';
+@import '../../modules/widgets/_ads.scss';
+@import '../../modules/widgets/_post-list.scss';
+@import '../../modules/widgets/_subscribe.scss';
 
 // Import Site Styles
 @import 'site';
