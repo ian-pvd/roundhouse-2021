@@ -1,10 +1,10 @@
 <?php
 /**
- * roundhouse Feature Image
+ * Roundhouse Feature Image
  *
  * Theme output tags
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 // Display the Featured Image

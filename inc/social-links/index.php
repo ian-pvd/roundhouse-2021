@@ -2,13 +2,13 @@
 /**
  * Roundhouse Social Links
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 /* Register Social Links Menu Location. */
 register_nav_menus(
 	[
-		'social-links' => esc_html__( 'Social Links', 'pvd' ),
+		'social-links' => esc_html__( 'Social Links', 'roundhouse' ),
 	]
 );
 

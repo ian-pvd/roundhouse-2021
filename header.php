@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site site--mobile-nav">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pvd' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'roundhouse' ); ?></a>
 
 	<header id="masthead" class="site-header site-header--sticky">
 		<div class="site-header__wrapper">
@@ -45,7 +45,7 @@
 			<?php if ( has_nav_menu( 'primary-nav' ) ) : ?>
 
 				<nav id="site-navigation" class="site-header__navigation main-navigation main-navigation--priority-nav">
-					<button id="mobile-nav-toggle" class="main-navigation__menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pvd' ); ?></button>
+					<button id="mobile-nav-toggle" class="main-navigation__menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'roundhouse' ); ?></button>
 					<?php
 					// Add search bar to nav before menu.
 					$menu_prefix_markup = get_search_form( false );

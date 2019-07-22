@@ -2,7 +2,7 @@
 /**
  * Manage static assets
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 /**
