@@ -1,8 +1,8 @@
 <?php
 /**
- * roundhouse Theme Customizer
+ * Roundhouse Theme Customizer
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 /**

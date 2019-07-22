@@ -1,10 +1,10 @@
 <?php
 /**
- * roundhouse Feature Image
+ * Roundhouse Feature Image
  *
  * Fieldmanager fields config
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 /**

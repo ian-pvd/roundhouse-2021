@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 		wp_link_pages(
 			[
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pvd' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'roundhouse' ),
 				'after'  => '</div>',
 			]
 		);
@@ -36,7 +36,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'pvd' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'roundhouse' ),
 						array(
 							'span' => array(
 								'class' => array(),

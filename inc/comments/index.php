@@ -4,7 +4,7 @@
  *
  * Customize or disable theme comments options
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 if ( ! function_exists( 'pvd_disable_comments' ) ) :

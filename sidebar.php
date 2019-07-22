@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 // The default sidebar.

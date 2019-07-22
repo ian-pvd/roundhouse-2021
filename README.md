@@ -32,11 +32,11 @@ The roundhouse theme ships with an assortment of common, pre-built options for y
     $ git clone https://github.com/ian-pvd/roundhouse.git your-project
     ```
 2. Find and replace any instances of the roundhouse namespace.
-    - Search for `'pvd'` (inside single quotations) to replace the text domain.
-    - Replace `Text Domain: pvd` in `style.css` with your project's text domain.
+    - Search for `'roundhouse'` (inside single quotations) to replace the text domain.
+    - Replace `Text Domain: roundhouse` in `style.css` with your project's text domain.
     - Preform a case-sensative search for `pvd_` to replace all the function & variable names.
     - Perform a case-sensative search for `PVD_` to replace all the constant names.
-    - Search for <code>&nbsp;roundhouse</code> (with a space before it) to capture DocBlocks.
+    - Search for <code>&nbsp;Roundhouse</code> (with a space before it) to capture DocBlocks.
     - Search for `pvd-` to capture prefixed handles.
 3. Run `npm install` & `npm run build` in your project directory.
 4. Assign some menus to the Primary Navigation and Footer Utilities menus.
