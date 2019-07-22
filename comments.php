@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 /*
@@ -41,13 +41,13 @@ if ( post_password_required() ) {
 			if ( '1' === $pvd_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'pvd' ),
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'roundhouse' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $pvd_comment_count, 'comments title', 'pvd' ) ),
+					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $pvd_comment_count, 'comments title', 'roundhouse' ) ),
 					number_format_i18n( $pvd_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -74,7 +74,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments...
 		if ( ! comments_open() ) :
 			?>
-			<p class="comments__none"><?php esc_html_e( 'Comments are closed.', 'pvd' ); ?></p>
+			<p class="comments__none"><?php esc_html_e( 'Comments are closed.', 'roundhouse' ); ?></p>
 			<?php
 		endif;
 

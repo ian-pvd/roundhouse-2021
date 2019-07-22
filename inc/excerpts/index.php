@@ -2,7 +2,7 @@
 /**
  * Roundhouse custom excerpts feature.
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 /**

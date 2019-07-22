@@ -1,10 +1,10 @@
 <?php
 /**
- * roundhouse functions and definitions
+ * Roundhouse functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 define( 'PVD_PATH', dirname( __FILE__ ) );
@@ -22,10 +22,10 @@ if ( ! function_exists( 'pvd_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on roundhouse, use a find and replace
-		 * to change 'pvd' to the name of your theme in all the template files.
+		 * If you're building a theme based on Roundhouse, use a find and replace
+		 * to change 'roundhouse' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'pvd', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'roundhouse', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -48,8 +48,8 @@ if ( ! function_exists( 'pvd_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			[
-				'primary-nav' => esc_html__( 'Primary Navigation', 'pvd' ),
-				'utilities'   => esc_html__( 'Footer Utilities', 'pvd' ),
+				'primary-nav' => esc_html__( 'Primary Navigation', 'roundhouse' ),
+				'utilities'   => esc_html__( 'Footer Utilities', 'roundhouse' ),
 			]
 		);
 

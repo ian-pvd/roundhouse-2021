@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts in a list.
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 ?>
