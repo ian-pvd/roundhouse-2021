@@ -26,7 +26,7 @@ function pvd_display_ad( $ad_position = null, $ad_size = '300x250' ) {
 	// Check if theme should display ads.
 	if ( ! pvd_get_setting( 'display-ads' ) ) {
 		// If not, leave an HTML comment.
-		echo '<!-- ads display option disabled - ' . esc_attr( $ad_position ) . ' -->';
+		echo '<!-- ads display setting disabled - ' . esc_attr( $ad_position ) . ' -->';
 		return;
 	}
 
@@ -57,7 +57,7 @@ function pvd_display_ad( $ad_position = null, $ad_size = '300x250' ) {
 								/* translators: %1$s blog name, %2$s donate link */
 								__(
 									'%1$s is reader supported local news. Please consider whitelisting ads on this site, or making a donation on our %2$s.',
-									'pvd'
+									'roundhouse'
 								),
 								[ 'a' => [ 'href' => [] ] ]
 							) . '</span></div>',
@@ -65,13 +65,13 @@ function pvd_display_ad( $ad_position = null, $ad_size = '300x250' ) {
 							sprintf(
 								'<a href="%1$s">%2$s</a>',
 								esc_url( pvd_get_page( 'donate' ) ),
-								esc_html__( 'support page', 'pvd' )
+								esc_html__( 'support page', 'roundhouse' )
 							)
 						);
 				} else {
 					$ad_appeal = sprintf(
 						'<div class="ad__appeal ad__appeal--button"><span><a href="' . esc_url( pvd_get_page( 'donate' ) ) . '" class="link-button">%1$s</a></span></div>',
-						__( 'Support Us', 'pvd' )
+						__( 'Support Us', 'roundhouse' )
 					);
 				}
 
@@ -91,7 +91,7 @@ function pvd_display_ad( $ad_position = null, $ad_size = '300x250' ) {
 					'<div class="ad-view ' . esc_attr( $ad_view ) . ' ad-size--' . esc_attr( $dimensions ) . '" style="' . esc_attr( $px_size ) . '"><span class="ad__placeholder-text">%1$s</span><img class="ad__image" src="' . esc_url( 'https://source.unsplash.com/collection/1349357/' . $dimensions ) . '/">%2$s</div>',
 					sprintf(
 						'%1$s %2$s',
-						esc_html__( 'Advertisement', 'pvd' ),
+						esc_html__( 'Advertisement', 'roundhouse' ),
 						esc_html( $dimensions )
 					),
 					wp_kses(

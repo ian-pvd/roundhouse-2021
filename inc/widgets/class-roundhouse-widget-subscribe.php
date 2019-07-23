@@ -20,7 +20,7 @@ class Roundhouse_Widget_Subscribe extends WP_Widget {
 			'classname'   => 'widget--pvd-subscribe',
 			'description' => 'Roundhouse Subscribe widget.',
 		];
-		parent::__construct( 'pvd_subscribe_widget', __( 'Subscribe Widget', 'pvd' ), $widget_args );
+		parent::__construct( 'pvd_subscribe_widget', __( 'Subscribe Widget', 'roundhouse' ), $widget_args );
 	}
 
 	/**
@@ -102,14 +102,14 @@ class Roundhouse_Widget_Subscribe extends WP_Widget {
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
-				<?php esc_html_e( 'Title:', 'pvd' ); ?>
+				<?php esc_html_e( 'Title:', 'roundhouse' ); ?>
 
 			</label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'background_url' ) ); ?>">
-				<?php esc_html_e( 'Enter a background image URL here:', 'pvd' ); ?>
+				<?php esc_html_e( 'Enter a background image URL here:', 'roundhouse' ); ?>
 			</label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'background_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'background_url' ) ); ?>" type="url" value="<?php echo esc_url( $background_url ); ?>" />
 		</p>
@@ -118,19 +118,19 @@ class Roundhouse_Widget_Subscribe extends WP_Widget {
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'form_action' ) ); ?>">
-				<?php esc_html_e( 'Enter the form action (destination) URL here:', 'pvd' ); ?>
+				<?php esc_html_e( 'Enter the form action (destination) URL here:', 'roundhouse' ); ?>
 			</label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'form_action' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'form_action' ) ); ?>" type="url" value="<?php echo esc_url( $form_action ); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'form_user_id' ) ); ?>">
-				<?php esc_html_e( 'Enter your MailChimp user ID here:', 'pvd' ); ?>
+				<?php esc_html_e( 'Enter your MailChimp user ID here:', 'roundhouse' ); ?>
 			</label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'form_user_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'form_user_id' ) ); ?>" type="text" value="<?php echo esc_html( $form_user_id ); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'form_list_id' ) ); ?>">
-				<?php esc_html_e( 'Enter your mailing list ID here:', 'pvd' ); ?>
+				<?php esc_html_e( 'Enter your mailing list ID here:', 'roundhouse' ); ?>
 			</label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'form_list_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'form_list_id' ) ); ?>" type="text" value="<?php echo esc_html( $form_list_id ); ?>" />
 		</p>

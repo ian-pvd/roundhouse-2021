@@ -26,7 +26,7 @@ if ( ! function_exists( 'pvd_get_option' ) ) :
 		// An array of hardcoded theme settings.
 		$theme_settings = [
 			// Toggle display advertisments.
-			'display-ads' => false,
+			'display-ads' => true,
 		];
 
 		if ( ! empty( $theme_settings[ $setting ] ) ) {

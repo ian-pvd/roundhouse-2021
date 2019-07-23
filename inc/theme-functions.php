@@ -2,7 +2,7 @@
 /**
  * Theme helper functions.
  *
- * @package roundhouse
+ * @package Roundhouse
  */
 
 if ( ! function_exists( 'pvd_social_handle' ) ) :
