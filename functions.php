@@ -45,7 +45,13 @@ if ( ! function_exists( 'pvd_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		/*
+		 * Add custom thumbnails sizes to the theme.
+		 */
+		add_image_size( 'pvd_stamp', 200, 200 );
+		add_image_size( 'pvd_tout', 640, 427 );
+
+		// This theme uses wp_nav_menu() in the following locations.
 		register_nav_menus(
 			[
 				'primary-nav' => esc_html__( 'Primary Navigation', 'roundhouse' ),
@@ -57,19 +63,28 @@ if ( ! function_exists( 'pvd_setup' ) ) :
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			[
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			]
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'pvd_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'pvd_custom_background_args',
+				[
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				]
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -79,15 +94,15 @@ if ( ! function_exists( 'pvd_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
-
-		// Add theme suppot for post thumbnails.
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support(
+			'custom-logo',
+			[
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			]
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'pvd_setup' );
@@ -98,11 +113,14 @@ add_action( 'after_setup_theme', 'pvd_setup' );
  * @param  array $vars Array of query vars.
  * @return  array $vars Array of query vars.
  */
-add_filter( 'query_vars', function( $vars ) {
-	// Add a query var to enable webpack dev assets
-	$vars[] = 'webpack-dev';
-	return $vars;
-} );
+add_filter(
+	'query_vars',
+	function( $vars ) {
+		// Add a query var to enable webpack dev assets.
+		$vars[] = 'webpack-dev';
+		return $vars;
+	}
+);
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -147,19 +165,24 @@ require_once PVD_PATH . '/inc/assets.php';
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Roundhouse: Theme Settings.
+ * Theme specific settings which belong in WP Admin.
  */
 require_once PVD_PATH . '/inc/theme-settings.php';
 
 /**
- * Custom template tags for this theme.
+ * Theme template tags for displaying custom content.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require_once PVD_PATH . '/inc/theme-tags.php';
 
 /**
- * Functions which enhance the theme by hooking into WordPress.
+ * Theme hooks.
  */
-require get_template_directory() . '/inc/template-functions.php';
+require_once PVD_PATH . '/inc/theme-hooks.php';
+
+/**
+ * Theme helper functions.
+ */
+require_once PVD_PATH . '/inc/theme-functions.php';
 
 /**
  * Customizer additions.
@@ -184,14 +207,19 @@ require_once PVD_PATH . '/inc/social-links/index.php';
 require_once PVD_PATH . '/inc/comments/index.php';
 
 /**
+ * Roundhouse: Load Ads Module
+ */
+require_once PVD_PATH . '/inc/ads/index.php';
+
+/**
+ * Roundhouse: Load Widgets Module
+ */
+require_once PVD_PATH . '/inc/widgets/index.php';
+
+/**
  * Roundhouse: Load Custom Excerpts
  */
 require_once PVD_PATH . '/inc/excerpts/index.php';
-
-/**
- * Roundhouse: Widgets Module
- */
-require_once PVD_PATH . '/inc/widgets/index.php';
 
 /**
  * Roundhouse: Load Custom Featured Image Options

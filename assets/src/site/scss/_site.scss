@@ -45,6 +45,16 @@ body,
 }
 /* stylelint-enable */
 
+/* Special site-wide selectors */
+.site-logotype {
+	font-family: font-family(logotype);
+	line-height: 1;
+
+	span {
+		font-weight: 700;
+	}
+}
+
 /* Common Element Defaults */
 
 // Headings
@@ -171,6 +181,7 @@ textarea {
 
 button,
 input {
+	-webkit-appearance: none;
 	height: 1.75rem;
 	line-height: 1;
 }
@@ -224,6 +235,23 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+.link-button {
+	background: $color--primary;
+	border-radius: rem(4);
+	border: none;
+	color: $color--text-alt;
+	display: inline-block;
+	font-size: 1rem;
+	padding: rem(4) 1rem;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color--text-alt;
+	}
 }
 
 /* Media Containers */
