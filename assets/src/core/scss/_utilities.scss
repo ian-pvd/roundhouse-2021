@@ -63,7 +63,7 @@
 }
 
 // Display pseudo element as block
-@mixin pseudo-block($height: 1em, $width: 1em) {
+@mixin pseudo-block($width: 1em, $height: 1em) {
 	content: '';
 	display: block;
 	height: $height;
