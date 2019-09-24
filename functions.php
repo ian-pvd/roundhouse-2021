@@ -225,3 +225,8 @@ require_once PVD_PATH . '/inc/excerpts/index.php';
  * Roundhouse: Load Custom Featured Image Options
  */
 // require_once PVD_PATH . '/inc/featured-image/index.php';
+
+/**
+ * Roundhouse: Include Template Helper Functions
+ */
+require_once PVD_PATH . '/inc/templates/index.php';
