@@ -22,6 +22,15 @@ function pvd_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	// Check if post type should have featured image class.
+	if ( is_singular( [ 'post', 'page' ] ) ) {
+		// If single post has a featured image...
+		if ( has_post_thumbnail( get_the_ID() ) ) {
+			// Add a 'has featured image' class to the body tag.
+			$classes[] = 'has-featured-image';
+		}
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'pvd_body_classes' );
