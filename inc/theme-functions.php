@@ -39,3 +39,32 @@ if ( ! function_exists( 'pvd_social_handle' ) ) :
 		return $social_link;
 	}
 endif;
+
+if ( ! function_exists( 'pvd_get_the_ID' ) ) :
+	// phpcs:disable WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid
+	// -- This function name matches the `get_the_ID()` case, and is meant as a drop-in wrapper.
+	/**
+	 * Helper function to sanitize an ID if one is provided, or to get the
+	 *  global post ID as a fallback.
+	 *
+	 * Differs from a simple get_the_ID() call by checking if a custom value
+	 *  is present first before using the value from $post.
+	 *
+	 * @param  int $post_id The post ID to sanitize.
+	 * @return int|false    The retreived post ID.
+	 */
+	function pvd_get_the_ID( $post_id = 0 ) {
+		// Sanitize the post ID to make sure its an integer.
+		$post_id = absint( $post_id );
+
+		// If no post ID ...
+		if ( ! $post_id ) {
+			// Get the post ID.
+			$post_id = get_the_ID();
+		}
+
+		// Return either the ID or false.
+		return ! empty( $post_id ) ? $post_id : false;
+	}
+	// phpcs:enable
+endif;
