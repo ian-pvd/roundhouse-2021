@@ -26,7 +26,7 @@
 		position: relative;
 
 		&::before {
-			@include pseudo-block(100%,100%);
+			@include pseudo-block(100%, 100%);
 			@include absolute-pinned();
 			background: fade-out(color(black),0.5);
 		}
