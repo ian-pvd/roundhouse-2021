@@ -9,9 +9,9 @@
 	@return ( $px / $base ) * 1rem;
 }
 
-// Space using rem grid.
-@function spacer($units) {
-	@return ( $units * 1rem );
+// Space using base rem grid value.
+@function spacer($units, $base: $base-spacer) {
+	@return ( $units * $base );
 }
 
 /* Mixins */

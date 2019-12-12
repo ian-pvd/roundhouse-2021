@@ -2,8 +2,9 @@
  * Theme core styles
  */
 
-// Base Unit
+// Base Units
 $base-unit: 16;
+$base-spacer: 1rem;
 
 // Import Core Files
 @import 'utilities';
