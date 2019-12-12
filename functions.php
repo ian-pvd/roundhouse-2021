@@ -9,6 +9,39 @@
 
 define( 'PVD_PATH', dirname( __FILE__ ) );
 define( 'PVD_URL', get_template_directory_uri() );
+define(
+	'PVD_ALLOWED_HTML',
+	[
+		'a'   => [
+			'class' => [],
+			'href'  => [],
+			'title' => [],
+		],
+		'div' => [
+			'class' => [],
+		],
+		'h2'  => [
+			'class' => [],
+		],
+		'h3'  => [
+			'class' => [],
+		],
+		'img' => [
+			'alt'    => [],
+			'class'  => [],
+			'height' => [],
+			'sizes'  => [],
+			'src'    => [],
+			'srcset' => [],
+			'width'  => [],
+		],
+		'nav' => [
+			'aria-label' => [],
+			'class'      => [],
+			'role'       => [],
+		],
+	]
+);
 
 if ( ! function_exists( 'pvd_setup' ) ) :
 	/**
